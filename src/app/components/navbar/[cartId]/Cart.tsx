@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { FaCartArrowDown } from "react-icons/fa";
 import img1 from "../../../images/laptop-1.jpeg";
 import img2 from "../../../images/laptop-2.jpg";
@@ -30,35 +31,44 @@ export default function CartIcon() {
       return number;
     } else return;
   });
-  //console.log(findNumber);
+  console.log(findNumber);
 
   return (
     <div>
-      <div>
-        <a href="/">Home</a> {">"}
-        <a href="/components/navbar/cartId"> Cart</a>
+      <div className="m-4">
+        <Link href={"/"} className="text-blue-600">
+          Home
+        </Link>{" "}
+        {"> "}
+        <Link href={"/components/navbar/cartId"}>Cart</Link>
       </div>
       <a href={"/components/navbar/cartId"}>
         <FaCartArrowDown className="text-6xl  mx-10 my-2 absolute top-0 right-0" />
       </a>
-      {url[40] === "0" ? (
-        <Image src={img3} alt="laptop-pic" />
-      ) : url[40] === "1" ? (
-        <Image src={img2} alt="laptop-pic" />
-      ) : url[40] === "2" ? (
-        <Image src={img1} alt="laptop-pic" />
-      ) : (
-        <div></div>
-      )}
-      {url[40] === "0" ? (
-        <p>cost : 23$ x{productsCount}</p>
-      ) : url[40] === "1" ? (
-        <p>cost : 45$ x{productsCount} </p>
-      ) : url[40] === "2" ? (
-        <p>cost : 10$ x{productsCount} </p>
-      ) : (
-        <div></div>
-      )}
+      <div className="w-100 m-4">
+        {url[40] === "0" ? (
+          <Image src={img3} alt="laptop-pic" />
+        ) : url[40] === "1" ? (
+          <Image src={img2} alt="laptop-pic" />
+        ) : url[40] === "2" ? (
+          <Image src={img1} alt="laptop-pic" />
+        ) : (
+          <div></div>
+        )}
+      </div>
+
+      <div className="m-2">
+        {url[40] === "0" ? (
+          <p>cost : 23$ x{productsCount}</p>
+        ) : url[40] === "1" ? (
+          <p>cost : 45$ x{productsCount} </p>
+        ) : url[40] === "2" ? (
+          <p>cost : 10$ x{productsCount} </p>
+        ) : (
+          <div></div>
+        )}
+      </div>
+
       {numbers.map((number) => {
         if (url[40] === number.toString()) {
           return (
@@ -86,18 +96,22 @@ export default function CartIcon() {
         }
       })}
       {!findNumber ? (
-        <h1>You'r cart is empty please choose the products!</h1>
+        <h1 className="text-red-600 m-2">
+          You'r cart is empty please choose the products!
+        </h1>
       ) : null}
 
-      {url[40] === "0" ? (
-        <h2>payment : {23 * productsCount}$ </h2>
-      ) : url[40] === "1" ? (
-        <h2>payment : {45 * productsCount}$ </h2>
-      ) : url[40] === "2" ? (
-        <h2>payment : {10 * productsCount}$ </h2>
-      ) : (
-        <div></div>
-      )}
+      <div className="m-2 text-green-600">
+        {url[40] === "0" ? (
+          <h2>payment : {23 * productsCount} $ </h2>
+        ) : url[40] === "1" ? (
+          <h2>payment : {45 * productsCount} $ </h2>
+        ) : url[40] === "2" ? (
+          <h2>payment : {10 * productsCount} $ </h2>
+        ) : (
+          <div></div>
+        )}
+      </div>
     </div>
   );
 }
