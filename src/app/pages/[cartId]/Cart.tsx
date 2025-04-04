@@ -2,9 +2,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaCartArrowDown } from "react-icons/fa";
-import img1 from "../../../images/laptop-1.jpeg";
-import img2 from "../../../images/laptop-2.jpg";
-import img3 from "../../../images/laptop-3.jpg";
+import img1 from "../../images/laptop-1.jpeg";
+import img2 from "../../images/laptop-2.jpg";
+import img3 from "../../images/laptop-3.jpg";
 // import img4 from '../../../images/lenovo-nda-yoga.webp'
 // import img5 from '../../../images/lenovo-sensational-spring-sale-2025-w1.jpg'
 import Image from "next/image";
@@ -13,7 +13,7 @@ export default function CartIcon() {
   const [numbers, setNumbers] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
   const url = window.location.href;
-  //console.log(url);
+  console.log(url.length);
 
   const add = () => {
     setProductsCount(productsCount + 1);

@@ -9,7 +9,7 @@ export default function FilterData({
     <div>
       <div className="flex">
         <div>
-          <h1>Filter by specs</h1>
+          <h1 className="mb-5">Filter by specs</h1>
           <h2 className="text-red-600 my-2">Brand</h2>
           <input type="checkbox" onClick={filter} value={"Braavosi"} /> Braavosi <br />
           <input type="checkbox" onClick={filter} value={"Walder"} /> Walder

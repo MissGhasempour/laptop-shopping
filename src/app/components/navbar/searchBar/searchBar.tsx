@@ -25,17 +25,11 @@ export default function SearchBar({
     }
   };
   return (
-    <div>
+    <div className="m-7">
       <input
         type="text"
         placeholder="What are you looking for today ? "
-        style={{
-          border: "2px solid grey",
-          borderRadius: "10px",
-          width: "50vw",
-          padding: "5px",
-          margin: "10px",
-        }}
+        className="border rounded-2xl w-200 p-3 ml-10 "
         onChange={search}
       />
 

@@ -5,13 +5,15 @@ export default async function Page() {
   // const ProductDefinition = dynamic((): any =>  {
   //   ssr: false
   // })
+
   const fetched = await fetch(
     "https://www.anapioficeandfire.com/api/characters"
   );
   const res = await fetched.json();
+  console.log(res)
   return (
     <div>
-      <ProductDefinition  res={res} />
+      <ProductDefinition res={res} />
     </div>
   );
 }
