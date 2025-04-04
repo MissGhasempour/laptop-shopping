@@ -26,12 +26,12 @@ export default function CartIcon() {
     setProductsCount(0);
   };
 
-  const findNumber = numbers.find((number) => {
+  const isProduct = numbers.map((number) => {
     if (url[40] === number.toString()) {
       return number;
     } else return;
   });
-  console.log(findNumber);
+  //console.log(isProduct);
 
   return (
     <div>
@@ -95,7 +95,7 @@ export default function CartIcon() {
           );
         }
       })}
-      {!findNumber ? (
+      {!isProduct ? (
         <h1 className="text-red-600 m-2">
           You'r cart is empty please choose the products!
         </h1>

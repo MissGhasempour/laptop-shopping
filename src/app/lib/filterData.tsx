@@ -10,18 +10,17 @@ export default function FilterData({
       <div className="flex">
         <div>
           <h1>Filter by specs</h1>
-          <h2>Brand</h2>
-          <input type="checkbox" onClick={filter} value={"Braavosi"} />
-          Braavosi <br />
-          <input type="checkbox" onClick={filter} value={"Walder"} /> Wlder
+          <h2 className="text-red-600 my-2">Brand</h2>
+          <input type="checkbox" onClick={filter} value={"Braavosi"} /> Braavosi <br />
+          <input type="checkbox" onClick={filter} value={"Walder"} /> Walder
           <br />
           <input
             type="checkbox"
             onClick={filter}
-            value={"Legion"}
-          /> Legion <br />
-          <input type="checkbox" onClick={filter} value={""} /> ThinkPad <br />
-          <input type="checkbox" onClick={filter} value={""} /> ThinkPad <br />
+            value={"Lamprey"}
+          /> Lamprey <br />
+          <input type="checkbox" onClick={filter} value={"Merling"} /> Merling <br />
+          <input type="checkbox" onClick={filter} value={"Crackbones"} /> Crackbones <br />
         </div>
       </div>
     </div>
