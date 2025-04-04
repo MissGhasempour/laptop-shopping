@@ -44,7 +44,7 @@ export default function DataInfo({
         )}
       </div>
 
-      <div className="">
+      <div className="w-100">
         <Image
           src={
             index[0] === 0
@@ -56,7 +56,7 @@ export default function DataInfo({
               : img_3
           }
           alt="laptop"
-          width={700}
+          className='w-100'
         ></Image>
       </div>
 

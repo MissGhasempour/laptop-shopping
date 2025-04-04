@@ -29,13 +29,7 @@ export default function SearchBar({
       <input
         type="text"
         placeholder="What are you looking for today ? "
-        style={{
-          border: "2px solid grey",
-          borderRadius: "10px",
-          width: "50vw",
-          padding: "5px",
-          margin: "10px",
-        }}
+        className="border rounded-2xl p-3 w-200 ml-20"
         onChange={search}
       />
 
