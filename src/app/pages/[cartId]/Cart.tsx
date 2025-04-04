@@ -49,7 +49,7 @@ export default function CartIcon() {
           Products
         </Link>{" "}
         {"> "}
-        <Link href={`/pages/productInfo/${url[28]}`} className="text-blue-600">
+        <Link href={`/pages/productInfo/productId=${url[28]}`} className="text-blue-600">
           ProductInfo
         </Link>{" "}
         {"> "}

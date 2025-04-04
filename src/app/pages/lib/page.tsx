@@ -11,9 +11,9 @@ export default async function Page({filter} : {filter : React.MouseEventHandler<
   return (
     <div>
     
-      <div>
-            <a href="/">Home</a>{' > '}
-            <a href="/lib">Products</a>
+      <div className="m-4">
+            <a href="/" className="text-blue-600">Home</a>{' > '}
+            <a href="/pages/lib">Products</a>
         </div>
       <GetApi res={res} filter={filter} />
       {/* {flag ? <ProductDefinition  res={res} /> : null} 

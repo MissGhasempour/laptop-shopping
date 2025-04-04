@@ -17,7 +17,7 @@ export default function ProductDefinition({
   ];
 }) {
   const url = window.location.href;
- // console.log(url, res);
+  console.log(url.length, url);
 
   const addToCart = () => {};
   return (
@@ -28,7 +28,7 @@ export default function ProductDefinition({
         </a>
         {" > "}
         <a href="../../../pages/lib" className="text-blue-600">Products</a> {" > "}
-        <a href={`/productInfo/productId=${url[44]}`}>Details</a>
+        <a href={`/pages/productInfo/productId=${url[50]}`}>Details</a>
       </div>
 
       <div className="mt-10 ml-4">
