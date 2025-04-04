@@ -19,7 +19,7 @@ export default async function Page() {
     <div>
       <div className="flex">
         <Logo />
-        <MdOutlineNewLabel className="relative left-105 top-3 text-3xl text-red-500"/>
+        <MdOutlineNewLabel className="relative left-267 top-3 text-3xl text-red-500"/>
         <CartIcon />
       </div>
       <Menu />

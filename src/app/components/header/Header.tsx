@@ -61,31 +61,31 @@ export default function Header() {
     if (currentIndex <= 1) setCurrentIndex(1);
     //console.log(currentIndex);
   };
-  const img1 = <Image src={img_1} alt="laptop-img" width={1300} height={100} />;
-  const img2 = <Image src={img_2} alt="laptop-img" width={1300} height={100} />;
-  const img3 = <Image src={img_3} alt="laptop-img" width={1300} height={100} />;
+  const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={100} />;
+  const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={100} />;
+  const img3 = <Image src={img_3} alt="laptop-img" width={1400} height={100} />;
 
   return (
     <div className="relative">
       {<div>{showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}</div>}
 
       <div className="controls">
-        <button className="absolute left-0 top-20 bg-stone-100 rounded p-1">
+        <button className="absolute left-0 top-20 bg-stone-100 rounded p-1 w-25 text-center ml-4">
           Previous
         </button>
         <FaCaretLeft
           onClick={prevSlide}
-          className="absolute left-20 top-20 bg-stone-100 rounded p-1 text-3xl"
+          className="absolute left-20 top-20 bg-stone-100 rounded p-1 ml-12 text-3xl"
         />
-        <button className="absolute right-0 top-20 bg-stone-100 rounded p-1">
+        <button className="absolute right-0 top-20 bg-stone-100 rounded p-1 w-25 text-center mr-4">
           Next
         </button>
         <FaCaretRight
           onClick={nextSlide}
-          className="absolute right-13 top-20 bg-stone-100 rounded p-1 text-3xl"
+          className="absolute right-13 top-20 bg-stone-100 rounded p-1 text-3xl mr-20"
         />
       </div>
-      <div className="relative left-100 w-20 bg-stone-300 px-3 rounded-xl m-4">
+      <div className="relative left-160 w-20 bg-stone-300 px-3 rounded-xl m-4 ">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />
