@@ -1,3 +1,4 @@
+import React from "react";
 import Products from "./products/products";
 import Link from "next/link";
 export default function Page() {

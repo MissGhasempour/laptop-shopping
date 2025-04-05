@@ -1,3 +1,4 @@
+import React from "react";
 import BestSelling from "./components/bestSelling/BestSelling";
 import Blog from "./components/blog/Blog";
 import Categories from "./components/categories/Categories";
@@ -9,6 +10,7 @@ import Menu from "./components/navbar/menu/Menu";
 import { MdOutlineNewLabel } from "react-icons/md";
 //import SearchBar from "./components/navbar/searchBar/searchBar";
 import SubMenu from "./components/navbar/sub-menu/SubMenu";
+import ProfileIcon from "./components/profileIcon/ProfileIcon";
 export default async function Page() {
   const fetched = await fetch(
     "https://www.anapioficeandfire.com/api/characters"
@@ -21,6 +23,7 @@ export default async function Page() {
         <Logo />
         <MdOutlineNewLabel className="relative left-267 top-3 text-3xl text-red-500"/>
         <CartIcon />
+        <ProfileIcon />
       </div>
       <Menu />
       <SubMenu />
