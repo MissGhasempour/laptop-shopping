@@ -27,6 +27,10 @@ export default function ProductDefinition({
           Home
         </a>
         {" > "}
+        <a href="/pages" className="text-blue-600">
+          View All
+        </a>
+        {" > "}
         <a href="../../../pages/lib" className="text-blue-600">Products</a> {" > "}
         <a href={`/pages/productInfo/productId=${url[50]}`}>Details</a>
       </div>
