@@ -13,7 +13,7 @@ export default function SubMenu() {
           }}
         >
           <li>
-            <Link href={"../../../../pages"}>Laptops </Link>{" "}
+            <Link href={"/products"}>Laptops </Link>{" "}
           </li>
           <li>
             <Link href={"#"}> Desktops</Link>{" "}
