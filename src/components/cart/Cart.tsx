@@ -3,9 +3,9 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { FaCartArrowDown } from "react-icons/fa";
-import img1 from "@/app/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
-import img2 from "@/app/images/laptop-1.jpg";
-import img3 from "@/app/images/laptop-3.jpg";
+import img1 from "@/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
+import img2 from "@/images/laptop-1.jpg";
+import img3 from "@/images/laptop-3.jpg";
 import Image from "next/image";
 
 export default function CartIcon() {

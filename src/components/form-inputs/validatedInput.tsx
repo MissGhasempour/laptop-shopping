@@ -1,13 +1,22 @@
-import React from "react"
+import React, { MouseEventHandler } from "react"
 import { useState, useCallback } from "react"
 import  Input  from "./Input"
 // className={fieldErrors.length > 0 ? "border-red-500" : ""}
 const ValidatedInput = ({
+  type,
   name,
   wasSubmitted,
+  defaultValue,
   errors,
   fieldSchema,
   ...props
+}: {
+  type : string;
+  name: string;
+  wasSubmitted : Boolean;
+  defaultValue : any;
+  errors : any;
+  fieldSchema : any;
 }) => {
   const [value, setValue] = useState("")
   const [touched, setTouched] = useState(false)
@@ -23,7 +32,7 @@ const ValidatedInput = ({
   const shouldRenderErrors = errors || wasSubmitted || touched
 
   const handleBlur = () => setTouched(true)
-  const handleChange = (e) => setValue(e.currentTarget.value)
+  const handleChange:MouseEventHandler<HTMLInputElement> = (e) => setValue(e.currentTarget.value)
 
   return (
     <>

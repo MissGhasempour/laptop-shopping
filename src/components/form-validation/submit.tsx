@@ -2,14 +2,14 @@
 import { useRouter } from "next/navigation";
 import React, { ChangeEventHandler } from "react";
 import { FormEvent } from "react";
-import ProfileInfo from "../../profile/dashboard/profileInfo";
+import ProfileInfo from "../profile/dashboard/profileInfo";
 
 export default function Submit() {
     const router = useRouter();
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
    
-    router.push("/pages/profile");
+    router.push("/profile");
     const formData = new FormData(event.currentTarget);
     const response = await fetch("/api/submit", {
       method: "POST",

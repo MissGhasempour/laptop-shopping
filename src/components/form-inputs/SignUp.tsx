@@ -8,14 +8,14 @@ import { actions } from "@/app/lib/form-inputs/zod/actions";
 export default function SignUp() {
   const [state, action] = useActionState(signUp, {});
   const router = useRouter();
-  //console.log(state);
+  console.log(state);
   //console.log(actions);
   const profileInfo = <ProfileInfo state={state} />;
   return (
     <form
       action={() => {
         try{
-          router.push("/pages/profile/dashboard");
+          router.push("/profile/dashboard");
         }catch(err) {
           console.log(err)
         }

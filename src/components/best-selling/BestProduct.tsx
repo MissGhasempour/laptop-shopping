@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import img from "@/app/images/zqvz1vw0e63x5kczhorged3oieavel774945.webp";
+import img from "@/images/zqvz1vw0e63x5kczhorged3oieavel774945.webp";
 import { FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import img1 from '@/app/images/laptop-3.jpg';
-import img2 from '@/app/images/laptop-1.jpg';
+import img1 from '@/images/laptop-3.jpg';
+import img2 from '@/images/laptop-1.jpg';
 export default function BestProduct({
   res,
   index,

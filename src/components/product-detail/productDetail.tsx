@@ -1,12 +1,11 @@
 "use client";
-import img_2 from "@/app/images/laptop-3.jpg";
-import img_1 from "@/app/images/laptop-1.jpg";
-import img_3 from "@/app/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
+import img_2 from "@/images/laptop-3.jpg";
+import img_1 from "@/images/laptop-1.jpg";
+import img_3 from "@/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
 import Image from "next/image";
 import { Link } from "react-router-dom";
-import getProducts from "@/app/lib/api/getProducts";
-//import { GetServerSideProps } from 'next';
-//import dynamic from 'next/dynamic';
+
+
 export default  function ProductDefinition({res} : {res : [
   { culture: string; aliases: string },
   { culture: string; aliases: string; name: string },
@@ -63,12 +62,7 @@ export default  function ProductDefinition({res} : {res : [
       <a href={`/${url[35]}`} onClick={addToCart}>
         Add To Cart
       </a>
-      {/* <button
-        onClick={addToCart}
-        className="rounded-md bg-zinc-500 p-2 m-3 text-stone-200"
-      >
-        Add to Cart
-      </button> */}
+     
     </div>
   );
 }

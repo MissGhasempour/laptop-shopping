@@ -1,13 +1,15 @@
-'use client'
+"use client";
 import React from "react";
 import Submit from "../form-validation/submit";
-//import { Form } from "react-router-dom";
-import { Form } from "react-router-dom";
+import SignUp from "../form-inputs/SignUp";
+// import { Form, useSubmit } from "react-router-dom";
 export default function Profile() {
+  // const submit = useSubmit();
   return (
     <div>
       {/* <Submit /> */}
-      <Form />
+      {/* <Form onChange={(event) => submit(event.currentTarget)} /> */}
+      <SignUp />
     </div>
   );
 }

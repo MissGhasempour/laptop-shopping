@@ -1,16 +1,15 @@
 "use client";
 import Image from "next/image";
-import img_2 from "@/app/images/laptop-3.jpg";
-import img_1 from "@/app/images/lenovo-sensational-spring-sale-2025-w1.jpg";
-import img_3 from "@/app/images/laptop-1.jpg";
+import img_2 from "@/images/laptop-3.jpg";
+import img_1 from "@/images/lenovo-sensational-spring-sale-2025-w1.jpg";
+import img_3 from "@/images/laptop-1.jpg";
 import { FaCaretLeft } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 import React, { useState } from "react";
 import { GoDot } from "react-icons/go";
 import { RxDotFilled } from "react-icons/rx";
 export default function Slider() {
-  // const images = ["./laptop-3.jpg", "./laptop-2.jpg", "./laptop-1.jpg"];
-
+ 
   const [currentIndex, setCurrentIndex] = useState(1);
   const [showPic1, setShowPic1] = useState(true);
   const [showPic2, setShowPic2] = useState(false);
