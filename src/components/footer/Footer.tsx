@@ -6,8 +6,8 @@ import { FaSquareYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-200">
-      <div className="flex mt-30 mx-20 text-3xl text-blue-900 p-12">
+    <footer className="bg-stone-200 sm:w-162 md:w-192 lg:w-317 max-sm:w-105 text-stone-900">
+      <div className="flex mt-30 mx-20 text-3xl text-blue-900 p-12 sm:text-2xl max-sm:mx-5">
         <div className="m-4">
           <FaInstagramSquare />
         </div>
@@ -24,7 +24,7 @@ export default function Footer() {
           <FaSquareYoutube />
         </div>
       </div>
-      <div className="flex">
+      <div className="flex sm:text-sm max-sm:text-sm">
         <div className="m-4">
           <h1 className="my-4">About Lenovo</h1>
           <p>
@@ -47,7 +47,7 @@ export default function Footer() {
             Replacement Parts Warranty Upgrade
           </p>
         </div>
-        <div className="m-4">
+        <div className="m-4 max-sm:hidden">
           <h1 className="my-4">RESOURCES</h1>
           <p>
             Lenovo EDU Community Legion Community Email Signup My Lenovo Rewards
@@ -55,11 +55,11 @@ export default function Footer() {
             Affiiliate Program Employee Purchase Program Glossary
           </p>
         </div>
-        <div className="m-4">
+        <div className="m-4 sm:mx-4 max-sm:hidden">
           <h1 className="my-4">CUSTOMER SUPPORT</h1>
           <p>Contact Us Support Order Status Product FAQs Shopping FAQs</p>
         </div>
-        <div className="m-4">
+        <div className="m-4 sm:mx-0 max-sm:hidden">
           <h1 className="my-4">PORTFOLIO</h1>
           <p>
             ThinkPad T Series ThinkPad X Series ThinkPad IdeaPad Yoga M Series
@@ -68,7 +68,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="m-4 ml-50">
+      <p className="m-4 ml-50 sm:ml-3 max-sm:ml-0">
         Privacy | Cookie Consent Tool | Terms of Use |Site Map | External
         Submission Policy | Anti-Slavery and Human Trafficking Statement
       </p>

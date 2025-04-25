@@ -1,15 +1,14 @@
 "use client";
 import Image from "next/image";
-import img_2 from "@/images/laptop-3.jpg";
-import img_1 from "@/images/lenovo-sensational-spring-sale-2025-w1.jpg";
-import img_3 from "@/images/laptop-1.jpg";
+import img_2 from "@/images/subhra-jyoti-paul-aAZMEpZVgo4-unsplash.jpg";
+import img_1 from "@/images/kaiyu-wu-pYgwmH--qgU-unsplash.jpg";
+import img_3 from "@/images/james-lewis-RP6sZTOCvuA-unsplash.jpg";
 import { FaCaretLeft } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 import React, { useState } from "react";
 import { GoDot } from "react-icons/go";
 import { RxDotFilled } from "react-icons/rx";
 export default function Slider() {
- 
   const [currentIndex, setCurrentIndex] = useState(1);
   const [showPic1, setShowPic1] = useState(true);
   const [showPic2, setShowPic2] = useState(false);
@@ -60,31 +59,40 @@ export default function Slider() {
     if (currentIndex <= 1) setCurrentIndex(1);
     //console.log(currentIndex);
   };
-  const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={100} />;
-  const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={100} />;
-  const img3 = <Image src={img_3} alt="laptop-img" width={1400} height={100} />;
+  const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={50} />;
+  const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={50} />;
+  const img3 = <Image src={img_3} alt="laptop-img" width={1400} height={50} />;
 
   return (
     <div className="relative">
-      {<div>{showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}</div>}
+      {
+        <div className="sm:ml-2 max-sm:w-102">
+          {showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}
+        </div>
+      }
 
-      <div className="controls">
-        <button className="absolute left-0 top-20 bg-stone-100 rounded p-1 w-25 text-center ml-4">
-          Previous
-        </button>
-        <FaCaretLeft
-          onClick={prevSlide}
-          className="absolute left-20 top-20 bg-stone-100 rounded p-1 ml-12 text-3xl"
-        />
-        <button className="absolute right-0 top-20 bg-stone-100 rounded p-1 w-25 text-center mr-4">
-          Next
-        </button>
-        <FaCaretRight
-          onClick={nextSlide}
-          className="absolute right-13 top-20 bg-stone-100 rounded p-1 text-3xl mr-20"
-        />
+      <div className="">
+        <div className="relative bottom-18 max-sm:top-0 text-stone-900">
+          <button className="absolute left-0 top-20 bg-stone-100 rounded p-1 w-25 text-center ml-4">
+            Previous
+          </button>
+          <FaCaretLeft
+            onClick={prevSlide}
+            className="absolute left-20 top-20 bg-stone-100 rounded p-1 ml-12 text-3xl "
+          />
+        </div>
+
+        <div className="relative bottom-18 right-0 max-sm:top-0 text-stone-900">
+          <button className="absolute right-0 top-20 bg-stone-100 rounded p-1 w-25 text-center mr-4">
+            Next
+          </button>
+          <FaCaretRight
+            onClick={nextSlide}
+            className="absolute right-13 top-20 bg-stone-100 rounded p-1 text-3xl mr-20"
+          />
+        </div>
       </div>
-      <div className="relative left-160 w-20 bg-stone-300 px-3 rounded-xl m-4 ">
+      <div className="relative left-160 w-20 bg-stone-300 text-zinc-900 px-3 rounded-xl m-4 sm:left-70 md:left-85 lg:left-150 max-sm:left-40 ">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />

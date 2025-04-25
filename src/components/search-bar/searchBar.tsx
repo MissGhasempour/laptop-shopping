@@ -1,9 +1,7 @@
 "use client";
-import { ChangeEvent, MouseEventHandler, useState } from "react";
-import Image from "next/image";
-import img1 from "@/images/laptop-3.jpg";
-import Link from "next/link";
+import { MouseEventHandler, useCallback, useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function SearchBar({
   res,
@@ -15,9 +13,33 @@ export default function SearchBar({
   ];
 }) {
   const [searchProduct, setSearchProduct] = useState("");
-  const [display, setDisplay] = useState('false');
-  const index = 0;
-  //console.log(searchProduct);
+  const [display, setDisplay] = useState("false");
+  const searchParams = useSearchParams();
+  const [queryParam, setQueryParam] = useState("");
+  const [param, setParam] = useState("");
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = new URLSearchParams(searchParams.toString());
+  const filterProducts = useCallback(
+    (value: any) => {
+      
+      params.set("brandname", value);
+      setParam(params.toString());
+      setQueryParam(params?.toString());
+      return router.push(
+        pathname + "?" + params.toString()
+      );
+    },
+
+    [searchParams]
+  );
+
+  useEffect(() => {
+    queryParam?.length !== 0
+      ? router.push(pathname  + "?" + param?.toString())
+      : router.push(pathname);
+  }, [queryParam]);
+
   const search: MouseEventHandler<HTMLInputElement> = (e) => {
     if (e.currentTarget.value === res[0].culture) {
       setSearchProduct(res[0].culture);
@@ -27,30 +49,24 @@ export default function SearchBar({
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 max-sm:mt-2">
       <input
         type="text"
         placeholder="What are you looking for today ? "
-        className="border rounded-2xl p-3 w-200 ml-20"
-        onClick={(e) => search(e)}
+        className="border rounded-2xl p-3 w-200 ml-20 sm:w-40 sm:m-0 sm:p-1 md:w-80 lg:w-140 lg:p-3 lg:mt-2 max-sm:w-40 max-sm:m-0 max-sm:p-1 max-md:w-10" 
+        onClick={(e) => {
+          // search(e);
+          filterProducts(e.currentTarget.value);
+        }}
       />
-      <a href={'/result-products'} className="text-blue-400" onClick={() => setDisplay('true')}> <FaSearch className="absolute top-8 left-245"/> </a>
-     
-      {searchProduct && display ? (
-        <div>
-          <h1>{searchProduct} </h1>
-          <Image src={img1} alt="laptop-pic" className="w-300" />
-          <p>{res[0].aliases} </p>
-          <Link
-            href={`/productInfo/${index}`}
-            className="text-blue-800 p-2 block border-2 w-25 my-2 rounded-md bg-purple-300"
-          >
-            details ...
-          </Link>
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <a
+        href={"/result-products"}
+        className="text-blue-400"
+        onClick={() => {setDisplay("true");router.push("result-products")}}
+      >
+        {" "}
+        <FaSearch className="absolute top-6 left-245 sm:left-57 md:left-90 lg:left-170 lg:top-10 max-sm:left-47 " />{" "}
+      </a>
     </div>
   );
 }

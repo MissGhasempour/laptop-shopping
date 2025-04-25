@@ -1,33 +1,44 @@
 "use client";
-import img_2 from "@/images/laptop-3.jpg";
-import img_1 from "@/images/laptop-1.jpg";
+import img_2 from "@/images/dell-ocAuPlfZXEc-unsplash.jpg";
+import img_1 from "@/images/taan-huyn-RyGOh7pRzAI-unsplash.jpg";
 import img_3 from "@/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
+import img_4 from "@/images/anete-lusina-zwsHjakE_iI-unsplash.jpg";
+import img_5 from "@/images/luis-quintero-aUnkqeCvz80-unsplash.jpg";
+import img_6 from "@/images/nicolas-bichon-ZhV4iqAXxyA-unsplash.jpg";
+import img_7 from "@/images/workperch-wnZ3ai3_idw-unsplash.jpg";
+import img_8 from "@/images/kari-shea-1SAnrIxw5OY-unsplash.jpg";
+import img_9 from "@/images/sreej-pradhan-msKaizMpoRs-unsplash.jpg";
+import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
-import { Link } from "react-router-dom";
 
-
-export default  function ProductDefinition({res} : {res : [
-  { culture: string; aliases: string },
-  { culture: string; aliases: string; name: string },
-  { culture: string; aliases: string; books: string[] }
-]}) {
-
+export default function ProductDefinition({
+  res,
+}: {
+  res: [
+    { culture: string; aliases: string; books: string[] },
+    { culture: string; aliases: string; name: string; books: string[] },
+    { culture: string; aliases: string; books: string[] }
+  ];
+}) {
   const url = window.location.href;
-  console.log(url.length)
+  console.log(url.length);
 
   const addToCart = () => {};
   return (
     <div>
-        <div>
-            <a href="/">Home</a>{' > '}
-            <a href={`/product-info/${url[35]}`}>Details</a>
-        </div>
+      <div>
+        <a href="/" className="inline-block my-4 mx-2 text-blue-700">
+          Home
+        </a>
+        {" >  "}
+        <a href={`/product-info/${url[35]}`}> Details</a>
+      </div>
       {url[35] === "0" ? (
-        <h2 className="text-purple-800">{res[0].culture}</h2>
+        <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
       ) : url[35] === "1" ? (
-        <h2 className="text-green-800">{res[1].name}</h2>
+        <h2 className="text-rose-600">{res[1].aliases}</h2>
       ) : (
-        <h2 className="text-green-800">{res[2].aliases}</h2>
+        <h2 className="text-rose-600">{res[2].aliases}</h2>
       )}
       <Image
         src={
@@ -37,32 +48,48 @@ export default  function ProductDefinition({res} : {res : [
             ? img_1
             : url[35] === "2"
             ? img_3
-            : img_3
+            : url[35] === "3"
+            ? img_4
+            : url[35] === "4"
+            ? img
+            : url[35] === "5"
+            ? img_5
+            : url[35] === "6"
+            ? img_6
+            : url[35] === "7"
+            ? img_7
+            : url[35] === "8"
+            ? img_8
+            : img_9
         }
         alt="laptop"
-        width={200}
+        width={400}
         height={50}
+        className="m-2"
       ></Image>
       {url[35] === "0" ? (
-        <p className="text-pink-500">{res[0].aliases}</p>
+        <p className="text-blue-800 m-4">{res[0].books[0]}</p>
       ) : url[35] === "1" ? (
-        <p className="text-pink-500">{res[1].aliases}</p>
+        <p className="text-blue-800 m-4">{res[1].books[0]}</p>
       ) : (
-        <p className="text-pink-500">{res[2].books[0]}</p>
+        <p className="text-blue-800 m-4">{res[2].books[0]}</p>
       )}
 
       {url[35] === "0" ? (
-        <p className="text-pink-500">{23}$</p>
+        <p className="text-green-500 mx-40 my-4"> {23}$ </p>
       ) : url[35] === "1" ? (
-        <p className="text-pink-500">{45}$</p>
+        <p className="text-green-500 mx-40 my-4">{45}$</p>
       ) : (
-        <p className="text-pink-500">{10}$</p>
+        <p className="text-green-500 mx-40 my-4">{10}$</p>
       )}
 
-      <a href={`/${url[35]}`} onClick={addToCart}>
+      <a
+        href={`/${url[35]}`}
+        onClick={addToCart}
+        className="inline-block mx-24 border rounded-xl p-3 hover:bg-stone-100 hover:text-zinc-900 w-40 text-center"
+      >
         Add To Cart
       </a>
-     
     </div>
   );
 }

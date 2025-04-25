@@ -10,21 +10,23 @@ export default function SubMenu() {
             justifyContent: "space-around",
             backgroundColor: "lightgrey",
             padding: "10px",
+            color:"black" 
           }}
+          className="sm:text-sm sm:ml-2 lg:text-2xl max-sm:text-sm max-sm:w-102"
         >
-          <li>
+          <li className="max-sm:p-1 max-sm:mx-2">
             <Link href={"/products"}>Laptops </Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-1 ">
             <Link href={"#"}> Desktops</Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-1 max-sm:mx-2">
             <Link href={"#"}>Workstations </Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-1 ">
             <Link href={"#"}> Accessories</Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-1">
             <Link href={"#"}> Software</Link>{" "}
           </li>
         </ul>

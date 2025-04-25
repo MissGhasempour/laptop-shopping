@@ -10,20 +10,21 @@ export default function Menu() {
             justifyContent: "space-around",
             marginBottom: "5px",
           }}
+          className="sm:text-sm lg:text-2xl max-sm:text-sm "
         >
-          <li style={{ borderBottom: "5px solid red", paddingBottom: "10px" }}>
+          <li style={{ borderBottom: "3px solid red", paddingBottom: "10px" }} className="max-sm:p-3 max-sm:mx-2">
             <Link href={"#"}> Products</Link>
           </li>
-          <li>
+          <li className="max-sm:p-3 ">
             <Link href={"#"}>Solutions </Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-3 ">
             <Link href={"#"}> Services</Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-3 ">
             <Link href={"#"}>About </Link>{" "}
           </li>
-          <li>
+          <li className="max-sm:p-3 ">
             <Link href={"#"}> Gaming</Link>{" "}
           </li>
         </ul>
