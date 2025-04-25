@@ -5,7 +5,7 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function SearchBar({
   res,
-  display,
+
 }: {
   res : [
     { culture: string; aliases: string },

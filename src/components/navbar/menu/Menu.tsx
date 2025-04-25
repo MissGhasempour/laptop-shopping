@@ -8,15 +8,14 @@ export default function Menu() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
-            marginBottom:'5px'
+            marginBottom: "5px",
           }}
           className="sm:text-sm lg:text-2xl max-sm:text-sm "
         >
-<<<<<<< HEAD
-          <li style={{borderBottom: '5px solid red', paddingBottom:'10px'}}>
-=======
-          <li style={{ borderBottom: "3px solid red", paddingBottom: "10px" }} className="max-sm:p-3 max-sm:mx-2">
->>>>>>> e757318 (some bugs fixed & responsive done.)
+          <li
+            style={{ borderBottom: "3px solid red", paddingBottom: "10px" }}
+            className="max-sm:p-3 max-sm:mx-2"
+          >
             <Link href={"#"}> Products</Link>
           </li>
           <li className="max-sm:p-3 ">

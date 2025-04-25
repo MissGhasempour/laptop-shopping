@@ -1,5 +1,5 @@
 import Image from "next/image"
-import img from '@/app/images/we-legion-7-3-hp-hero-4.jpg'
+import img from '@/images/we-legion-7-3-hp-hero-4.jpg'
 
 export default function Blog () {
     return <div>
