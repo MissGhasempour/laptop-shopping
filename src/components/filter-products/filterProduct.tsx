@@ -8,26 +8,26 @@ export default function FilterProduct() {
   let pathname = usePathname();
 
   const searchParams = useSearchParams();
-  const [queryParam, setQueryParam] = useState("")
-  const [param, setParam] = useState("")
+  const [queryParam, setQueryParam] = useState("");
+  const [param, setParam] = useState("");
 
   const filterProducts = useCallback(
     (value: any, checked: boolean) => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("brandname", value);
-      setParam(params.toString())
-      setQueryParam(params?.toString())
+      setParam(params.toString());
+      setQueryParam(params?.toString());
       return router.push(pathname + "?" + params.toString());
     },
 
     [searchParams]
   );
 
-
-  useEffect(()=>{
-    queryParam?.length !== 0 ? router.push(pathname + "?" + param?.toString()) : router.push(pathname)
-
-  },[queryParam])
+  useEffect(() => {
+    queryParam?.length !== 0
+      ? router.push(pathname + "?" + param?.toString())
+      : router.push(pathname);
+  }, [queryParam]);
 
   return (
     <div>
@@ -45,7 +45,6 @@ export default function FilterProduct() {
             }
             value={"Braavosi"}
             name="filter"
-           
           />{" "}
           Braavosi <br />
           <input

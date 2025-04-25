@@ -1,8 +1,6 @@
 #container {
-    background: url("../../../images/MTk4MDQzMTI5NzY3NTM1ODA2.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 60vh;
-    /* position: relative;
-    left: 20vw; */
+  background: url("../../../images/MTk4MDQzMTI5NzY3NTM1ODA2.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60vh;
 }

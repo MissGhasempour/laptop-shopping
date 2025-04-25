@@ -1,7 +1,9 @@
-import Client from "@/components/client-parameters/client"
+import Client from "@/components/client-parameters/client";
 
-export default function Page ( ) {
-    return <div>
-        <Client />
+export default function Page() {
+  return (
+    <div>
+      <Client />
     </div>
+  );
 }

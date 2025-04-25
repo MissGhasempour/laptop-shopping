@@ -58,17 +58,20 @@ export default function ProfileTest() {
     if (password.length > 5) {
       setPassword("You're password is strong");
     } else {
-     
       setPassword("You're password should has atleast 6 characters");
     }
   };
   return (
     <>
-     
       <form action="#" onSubmit={(e) => submit(e)} className="text-center m-8 ">
-        <label htmlFor="username">Username  </label>
+        <label htmlFor="username">Username </label>
         <br />
-        <input type="text" onChange={(e) => handleUsername(e)} required className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-4  w-70 p-1 " />
+        <input
+          type="text"
+          onChange={(e) => handleUsername(e)}
+          required
+          className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-4  w-70 p-1 "
+        />
         <br />
         <p className="mb-12">{usernameMessage} </p>
         <label htmlFor="password">Password </label>
@@ -81,7 +84,8 @@ export default function ProfileTest() {
         />
         <br />
         <p className="mb-12">{password} </p>
-        <label htmlFor="email">Email  </label><br />
+        <label htmlFor="email">Email </label>
+        <br />
         <input
           type="email"
           onChange={(e) => handleEmail(e.currentTarget.value)}
@@ -100,7 +104,11 @@ export default function ProfileTest() {
         />
         <br />
         <p className="mb-12">{age} </p>
-        <input type="submit" value="submit" className="m-4 border-2 p-2 w-30 rounded-xl border-zinc-100 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 hover:border-zinc-100" />
+        <input
+          type="submit"
+          value="submit"
+          className="m-4 border-2 p-2 w-30 rounded-xl border-zinc-100 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 hover:border-zinc-100"
+        />
       </form>
     </>
   );

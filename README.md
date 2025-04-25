@@ -1,4 +1,7 @@
-# laptop-shopping
+This is shopping website. It's about laptop products.
+It has some pages like products that there are laptop products to visit and product-detail that explain about each laptop features and card page that user can look choosed items there with cost and profile page that user enter the personal information and filter page that user can filter the laptop by brand.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
