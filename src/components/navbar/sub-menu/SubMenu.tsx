@@ -10,7 +10,7 @@ export default function SubMenu() {
             justifyContent: "space-around",
             backgroundColor: "lightgrey",
             padding: "10px",
-            color:"black" 
+            color: "black",
           }}
           className="sm:text-sm sm:ml-2 lg:text-2xl max-sm:text-sm max-sm:w-102"
         >

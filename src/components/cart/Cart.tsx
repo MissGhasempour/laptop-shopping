@@ -59,33 +59,33 @@ export default function CartIcon() {
       </div>
 
       <div className="w-100 m-4">
-      <Image
-        src={
-          url[22] === "0"
-            ? img_2
-            : url[22] === "1"
-            ? img_1
-            : url[22] === "2"
-            ? img_3
-            : url[22] === "3"
-            ? img_4
-            : url[22] === "4"
-            ? img
-            : url[22] === "5"
-            ? img_5
-            : url[22] === "6"
-            ? img_6
-            : url[22] === "7"
-            ? img_7
-            : url[22] === "8"
-            ? img_8
-            : img_9
-        }
-        alt="laptop"
-        width={400}
-        height={50}
-        className="m-2"
-      ></Image>
+        <Image
+          src={
+            url[22] === "0"
+              ? img_2
+              : url[22] === "1"
+              ? img_1
+              : url[22] === "2"
+              ? img_3
+              : url[22] === "3"
+              ? img_4
+              : url[22] === "4"
+              ? img
+              : url[22] === "5"
+              ? img_5
+              : url[22] === "6"
+              ? img_6
+              : url[22] === "7"
+              ? img_7
+              : url[22] === "8"
+              ? img_8
+              : img_9
+          }
+          alt="laptop"
+          width={400}
+          height={50}
+          className="m-2"
+        ></Image>
       </div>
 
       <div className="m-2">
@@ -95,7 +95,9 @@ export default function CartIcon() {
           <p>cost : 45$ x{productsCount} </p>
         ) : url[22] === "2" ? (
           <p>cost : 10$ x{productsCount} </p>
-        ) : <p>cost : 10$ x{productsCount} </p>}
+        ) : (
+          <p>cost : 10$ x{productsCount} </p>
+        )}
       </div>
 
       {numbers.map((number) => {

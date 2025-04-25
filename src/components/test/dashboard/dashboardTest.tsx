@@ -10,8 +10,8 @@ export default async function DashboardTest() {
   const passwordParam = cookie.get("password");
 
   return (
-    <div className="m-4  bg-pink-500" id="container">
-      <div className="text-center text-2xl sm-max:text-stone-900">
+    <div className="m-4  bg-pink-500 " id="container">
+      <div className="text-center text-2xl max-sm:text-stone-900 ">
         <p className="inline-block m-4">Hello {usernameParam?.value} </p>
         <p className="m-4">{ageParam?.value} years old </p>
         <p className="m-4">{emailParam?.value} </p>

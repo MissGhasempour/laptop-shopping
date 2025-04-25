@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Result from "@/components/filter-products/result";
 import { useSearchParams } from "next/navigation";
 

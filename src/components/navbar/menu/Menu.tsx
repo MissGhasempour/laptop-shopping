@@ -12,7 +12,10 @@ export default function Menu() {
           }}
           className="sm:text-sm lg:text-2xl max-sm:text-sm "
         >
-          <li style={{ borderBottom: "3px solid red", paddingBottom: "10px" }} className="max-sm:p-3 max-sm:mx-2">
+          <li
+            style={{ borderBottom: "3px solid red", paddingBottom: "10px" }}
+            className="max-sm:p-3 max-sm:mx-2"
+          >
             <Link href={"#"}> Products</Link>
           </li>
           <li className="max-sm:p-3 ">

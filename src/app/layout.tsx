@@ -5,7 +5,6 @@ import getProducts from "@/lib/api/getProducts";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,13 +29,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Laptop Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laptop Store</title>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ` }
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <Header res={res}/>
+        <Header res={res} />
         {children}
         <Footer />
       </body>

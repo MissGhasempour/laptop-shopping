@@ -6,7 +6,7 @@ import { FaSquareYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-200 sm:w-162 md:w-192 lg:w-317 max-sm:w-105 text-stone-900">
+    <footer className="bg-stone-200 sm:w-162 md:w-192 lg:w-335 max-sm:w-105 text-stone-900">
       <div className="flex mt-30 mx-20 text-3xl text-blue-900 p-12 sm:text-2xl max-sm:mx-5">
         <div className="m-4">
           <FaInstagramSquare />

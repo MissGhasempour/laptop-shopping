@@ -5,10 +5,10 @@ export default async function Page() {
   // const ProductDefinition = dynamic((): any =>  {
   //   ssr: false
   // })
-  const res = await getProducts()
+  const res = await getProducts();
   return (
     <div>
-      <ProductDefinition  res={res}/>
+      <ProductDefinition res={res} />
     </div>
   );
 }

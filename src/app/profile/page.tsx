@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Profile from "@/components/profile/profile";
+import React from "react";
+import ProfileTest from "@/components/test/profileTest";
 
 export default function Page() {
   return (
     <div>
-      <Profile />
+       <ProfileTest />
     </div>
   );
 }

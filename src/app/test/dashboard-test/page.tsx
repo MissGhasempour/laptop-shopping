@@ -1,7 +1,9 @@
 import DashboardTest from "@/components/test/dashboard/dashboardTest";
 
-export default  function Page (  ) { 
-    return <>
-        <DashboardTest />
+export default function Page() {
+  return (
+    <>
+      <DashboardTest />
     </>
+  );
 }

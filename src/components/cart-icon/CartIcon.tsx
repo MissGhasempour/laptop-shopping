@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 export default function CartIcon() {
   return (
