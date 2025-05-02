@@ -61,34 +61,28 @@ export default function Slider() {
   };
   const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={50} />;
   const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={50} />;
-  const img3 = <Image src={img_3} alt="laptop-img" width={1400} height={50} />;
+  const img3 = <Image src={img_3} alt="laptop-img" width={1300} height={50} />;
 
   return (
     <div className="relative">
       {
-        <div className="sm:ml-2 max-sm:w-102">
+        <div className="sm:ml-2 max-sm:w-100 ">
           {showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}
         </div>
       }
 
-      <div className="">
-        <div className="relative bottom-18 max-sm:top-0 text-stone-900">
-          <button className="absolute left-0 top-20 bg-stone-100 rounded p-1 w-25 text-center ml-4">
-            Previous
-          </button>
+      <div className="text-4xl">
+        <div className="relative bottom-18 max-sm:top-0 text-stone-900 ">
           <FaCaretLeft
             onClick={prevSlide}
-            className="absolute left-20 top-20 bg-stone-100 rounded p-1 ml-12 text-3xl "
+            className="absolute left-120 top-20 bg-stone-100 rounded p-1 ml-5  "
           />
         </div>
 
         <div className="relative bottom-18 right-0 max-sm:top-0 text-stone-900">
-          <button className="absolute right-0 top-20 bg-stone-100 rounded p-1 w-25 text-center mr-4">
-            Next
-          </button>
           <FaCaretRight
             onClick={nextSlide}
-            className="absolute right-13 top-20 bg-stone-100 rounded p-1 text-3xl mr-20"
+            className="absolute right-130 top-20 bg-stone-100 rounded p-1  mr-5"
           />
         </div>
       </div>

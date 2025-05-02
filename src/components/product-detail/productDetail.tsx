@@ -25,71 +25,81 @@ export default function ProductDefinition({
 
   const addToCart = () => {};
   return (
-    <div>
-      <div>
+    <div className="bg-zinc-100 mt-20 py-7">
+      <div className="text-stone-900">
         <a href="/" className="inline-block my-4 mx-2 text-blue-700">
           Home
         </a>
         {" >  "}
         <a href={`/product-info/${url[35]}`}> Details</a>
       </div>
-      {url[35] === "0" ? (
-        <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
-      ) : url[35] === "1" ? (
-        <h2 className="text-rose-600">{res[1].aliases}</h2>
-      ) : (
-        <h2 className="text-rose-600">{res[2].aliases}</h2>
-      )}
-      <Image
-        src={
-          url[35] === "0"
-            ? img_2
-            : url[35] === "1"
-            ? img_1
-            : url[35] === "2"
-            ? img_3
-            : url[35] === "3"
-            ? img_4
-            : url[35] === "4"
-            ? img
-            : url[35] === "5"
-            ? img_5
-            : url[35] === "6"
-            ? img_6
-            : url[35] === "7"
-            ? img_7
-            : url[35] === "8"
-            ? img_8
-            : img_9
-        }
-        alt="laptop"
-        width={400}
-        height={50}
-        className="m-2"
-      ></Image>
-      {url[35] === "0" ? (
-        <p className="text-blue-800 m-4">{res[0].books[0]}</p>
-      ) : url[35] === "1" ? (
-        <p className="text-blue-800 m-4">{res[1].books[0]}</p>
-      ) : (
-        <p className="text-blue-800 m-4">{res[2].books[0]}</p>
-      )}
+      <div>
 
-      {url[35] === "0" ? (
-        <p className="text-green-500 mx-40 my-4"> {23}$ </p>
-      ) : url[35] === "1" ? (
-        <p className="text-green-500 mx-40 my-4">{45}$</p>
-      ) : (
-        <p className="text-green-500 mx-40 my-4">{10}$</p>
-      )}
+      </div>
 
-      <a
-        href={`/${url[35]}`}
-        onClick={addToCart}
-        className="inline-block mx-24 border rounded-xl p-3 hover:bg-stone-100 hover:text-zinc-900 w-40 text-center"
-      >
-        Add To Cart
-      </a>
+      <div className="flex  px-62 py-10" >
+        <Image
+          src={
+            url[35] === "0"
+              ? img_2
+              : url[35] === "1"
+              ? img_1
+              : url[35] === "2"
+              ? img_3
+              : url[35] === "3"
+              ? img_4
+              : url[35] === "4"
+              ? img
+              : url[35] === "5"
+              ? img_5
+              : url[35] === "6"
+              ? img_6
+              : url[35] === "7"
+              ? img_7
+              : url[35] === "8"
+              ? img_8
+              : img_9
+          }
+          alt="laptop"
+          width={400}
+          height={50}
+          className="m-2"
+        ></Image>
+        <div className="mt-5">
+          <div className="text-center">
+            {url[35] === "0" ? (
+              <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
+            ) : url[35] === "1" ? (
+              <h2 className="text-rose-600">{res[1].aliases}</h2>
+            ) : (
+              <h2 className="text-rose-600">{res[2].aliases}</h2>
+            )}
+          </div>
+
+          {url[35] === "0" ? (
+            <p className="text-blue-800 m-4">{res[0].books[0]}</p>
+          ) : url[35] === "1" ? (
+            <p className="text-blue-800 m-4">{res[1].books[0]}</p>
+          ) : (
+            <p className="text-blue-800 m-4">{res[2].books[0]}</p>
+          )}
+
+          {url[35] === "0" ? (
+            <p className="text-green-500 mx-40 my-4"> {23}$ </p>
+          ) : url[35] === "1" ? (
+            <p className="text-green-500 mx-40 my-4">{45}$</p>
+          ) : (
+            <p className="text-green-500 mx-40 my-4">{10}$</p>
+          )}
+          <a
+            href={`/cart-id/${url[35]}`}
+            onClick={addToCart}
+            className="inline-block text-stone-900 mx-24 border rounded-xl p-3 hover:bg-stone-900 hover:text-zinc-100 w-40 text-center"
+          >
+            Add To Cart
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
