@@ -19,8 +19,8 @@ export default function Result({
 }) {
   return (
     <>
-      <div className="m-4">
-        <h1 className="text-blue-300 m-4">{brandname}</h1>
+      <div className="m-4 bg-zinc-100 ml-50 py-20 w-160 ">
+        {/* <h1 className="text-blue-600 m-4">{brandname}</h1> */}
         <Image
           src={
             brandname === "Walder"
@@ -36,12 +36,12 @@ export default function Result({
               : img2
           }
           alt="laptop-pic"
-          className="m-4"
+          className="m-4 ml-17"
           width={500}
         />
         <Link
-          href={`/product-info/${id}`}
-          className="hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-25 my-8 rounded-md ml-47 "
+          href={`/product-card/${id}`}
+          className=" text-blue-600 text-center hover:text-zinc-100 hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-45 my-8 rounded-md ml-54 "
         >
           details ...
         </Link>

@@ -26,55 +26,8 @@ export default function ProductInfo({
   isPurple?: boolean;
 }) {
   return (
-    <div className="my-7 mx-4 bg-zinc-100 ">
-      <div className="mb-4">
-        <h2 className="text-rose-600">{culture}</h2>
-      </div>
-
-      <div>
-        <Image
-          src={
-            id === 0
-              ? img_2
-              : id === 1
-              ? img_1
-              : id === 2
-              ? img_3
-              : id === 3
-              ? img_4
-              : id === 4
-              ? img
-              : id === 5
-              ? img_5
-              : id === 6
-              ? img_6
-              : id === 7
-              ? img_7
-              : id === 8
-              ? img_8
-              : img_9
-          }
-          alt="laptop"
-          className="w-50"
-        ></Image>
-      </div>
-
-      <div className="my-4">
-        <p className="text-blue-800">{books}</p>
-      </div>
-
-      <Link
-        href={`/product-card/${id}`}
-        className="text-zinc-100 p-2 block border-2 w-25 my-10 rounded-md bg-red-800 hover:bg-zinc-100 hover:text-red-800 hover:border-red-800"
-      >
-        details ...
-      </Link>
-      <br />
-      <div className="my-7 mx-4 bg-zinc-100 ">
-        <div className="mb-4">
-          <h2 className="text-rose-600">{culture}</h2>
-        </div>
-
+    <div className="my-7 mx-4  ">
+      <div className="bg-zinc-100 rounded-2xl w-60">
         <div>
           <Image
             src={
@@ -99,21 +52,73 @@ export default function ProductInfo({
                 : img_9
             }
             alt="laptop"
-            className="w-50"
+            className="w-50 relative left-5 top-5"
           ></Image>
         </div>
 
-        <div className="my-4">
+        <div className="mb-4 text-center mt-7">
+          <h2 className="text-rose-600">{culture}</h2>
+        </div>
+
+        <div className="my-4 ml-4 overflow-hidden">
           <p className="text-blue-800">{books}</p>
         </div>
 
         <Link
           href={`/product-card/${id}`}
-          className="text-zinc-100 p-2 block border-2 w-25 my-10 rounded-md bg-red-800 hover:bg-zinc-100 hover:text-red-800 hover:border-red-800"
+          className="text-zinc-100 p-2 block border-2 w-25 my-10 mx-20 text-center rounded-md bg-red-800 hover:bg-zinc-100 hover:text-red-800 hover:border-red-800"
         >
           details ...
         </Link>
         <br />
+      </div>
+
+      <div className="my-7 w-60 bg-zinc-100 rounded-2xl">
+        <div>
+          <Image
+            src={
+              id === 0
+                ? img_2
+                : id === 1
+                ? img_1
+                : id === 2
+                ? img_3
+                : id === 3
+                ? img_4
+                : id === 4
+                ? img
+                : id === 5
+                ? img_5
+                : id === 6
+                ? img_6
+                : id === 7
+                ? img_7
+                : id === 8
+                ? img_8
+                : img_9
+            }
+            alt="laptop"
+            className="w-50 relative left-5 top-5"
+          ></Image>
+        </div>
+
+        <div className="mb-4 text-center mt-7">
+          <h2 className="text-rose-600">{culture}</h2>
+        </div>
+
+        <div className="">
+          <div className="my-4 overflow-hidden">
+            <p className="text-blue-800">{books}</p>
+          </div>
+
+          <Link
+            href={`/product-card/${id}`}
+            className="text-zinc-100 p-2 block border-2 w-25 my-10 mx-20 text-center rounded-md bg-red-800 hover:bg-zinc-100 hover:text-red-800 hover:border-red-800"
+          >
+            details ...
+          </Link>
+          <br />
+        </div>
       </div>
     </div>
   );

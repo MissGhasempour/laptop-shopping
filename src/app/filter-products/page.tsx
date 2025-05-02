@@ -8,7 +8,7 @@ export default function FilterProductPage() {
   const brandname = searchParams.get("brandname");
   //   console.log(brandname)
   return (
-    <div className="flex">
+    <div className="flex bg-stone-600">
       <FilterProduct />
       {brandname === "Braavosi" ? (
         <Result searchParams={searchParams} brandname={brandname} id={0} />

@@ -63,8 +63,8 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <form action="#" onSubmit={(e) => submit(e)} className="text-center m-8 ">
-        <label htmlFor="username">Username </label>
+      <form action="#" onSubmit={(e) => submit(e)} className="relative left-100 m-8 ">
+        <label htmlFor="username" >Username </label>
         <br />
         <input
           type="text"
@@ -107,7 +107,7 @@ export default function ProfileTest() {
         <input
           type="submit"
           value="submit"
-          className="m-4 border-2 p-2 w-30 rounded-xl border-zinc-100 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 hover:border-zinc-100"
+          className="relative left-20 m-4 border-2 p-2 w-30 rounded-xl border-zinc-100 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 hover:border-zinc-100"
         />
       </form>
     </>

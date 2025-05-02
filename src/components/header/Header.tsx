@@ -19,15 +19,16 @@ export default async function Header({
     <header>
       <div className="flex">
         <Logo />
-        <SearchBar res={res} />
+        {/* <SearchBar res={res} /> */}
         <div className="sm:text-sm">
           <a href="/filter-products">
-            <TbFilterSearch className=" text-3xl relative top-5 left-5 sm:text-xl sm:ml-7 lg:text-4xl max-sm:text-xl max-sm:left-0 max-sm:top-3" />
+            <TbFilterSearch className=" text-4xl relative top-7 left-2 sm:text-xl sm:ml-7 lg:text-4xl max-sm:text-xl max-sm:left-0 max-sm:top-3 " />
           </a>
+          <span className="text-2xl max-sm:text-xl max-lg:text-xl">filter</span>
         </div>
-        {/* <span>filter products</span> */}
+        
         <ProfileIcon />
-        <MdOutlineNewLabel className="relative left-257 top-3 text-3xl text-red-500 sm:left-65 sm:text-xl md:left-55 md:text-2xl lg:left-75 lg:text-4xl max-sm:left-27 max-sm:text-xl" />
+
         <CartIcon />
       </div>
 

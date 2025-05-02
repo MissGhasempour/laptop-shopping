@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import img from "@/app/images/zqvz1vw0e63x5kczhorged3oieavel774945.webp";
 import { FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
@@ -72,7 +71,7 @@ export default function BestProduct({
         {/* <p className="m-2 mt-6 text-blue-500 ">{res[index].books[0]} </p> */}
         <button
           onClick={shop}
-          className="bg-zinc-900  w-50 rounded-xl text-zinc-100 py-2 my-10 mt-20 mx-10 sm:w-30 max-sm:w-20"
+          className="bg-zinc-900  w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-35 sm:w-30 max-sm:w-20 max-lg:left-10 "
         >
           Shop
         </button>

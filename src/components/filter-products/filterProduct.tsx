@@ -31,7 +31,7 @@ export default function FilterProduct() {
 
   return (
     <div>
-      <div className="flex m-4">
+      <div className="flex m-10">
         <div>
           <h1 className="mb-5">Filter by specs</h1>
           <h2 className="text-red-600 my-2">Brand</h2>
