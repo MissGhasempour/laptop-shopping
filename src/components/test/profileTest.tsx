@@ -24,7 +24,7 @@ export default function ProfileTest() {
   };
   const submit: FormEventHandler = (e) => {
     e.preventDefault();
-    router.push("/test/dashboard-test");
+    router.push("/dashboard");
   };
 
   const handleAge = (value: string) => {
@@ -63,7 +63,7 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <form action="#" onSubmit={(e) => submit(e)} className="relative left-100 m-8 ">
+      <form action="#" onSubmit={(e) => submit(e)} className=" m-8 ml-130 max-lg:ml-10 overflow-hidden">
         <label htmlFor="username" >Username </label>
         <br />
         <input

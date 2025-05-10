@@ -10,6 +10,7 @@ import img_8 from "@/images/kari-shea-1SAnrIxw5OY-unsplash.jpg";
 import img_9 from "@/images/sreej-pradhan-msKaizMpoRs-unsplash.jpg";
 import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ProductDefinition({
   res,
@@ -20,7 +21,10 @@ export default function ProductDefinition({
     { culture: string; aliases: string; books: string[] }
   ];
 }) {
-  const url = window.location.href;
+    const [url,setUrl] =  useState([""]);
+    useEffect(() => {
+      setUrl(window.location.href);
+    },[])
   console.log(url.length);
 
   const addToCart = () => {};

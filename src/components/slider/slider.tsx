@@ -32,8 +32,8 @@ export default function Slider() {
       setShowPic3(false);
       setShowPic1(false);
     }
-    if (currentIndex >= 3) setCurrentIndex(3);
-    //console.log(currentIndex);
+    if (currentIndex >= 3) setCurrentIndex(1);
+    console.log(currentIndex);
   };
 
   // Function to go to the previous image
@@ -41,7 +41,8 @@ export default function Slider() {
     // setCurrentIndex(
     //   (prevIndex) => (prevIndex - 1 + images.length) % images.length
     // );
-    setCurrentIndex(currentIndex - 1);
+    if (currentIndex <= 1) setCurrentIndex(3);
+    else setCurrentIndex(currentIndex - 1);
     if (currentIndex === 2) {
       setShowPic2(true);
       setShowPic1(false);
@@ -56,18 +57,20 @@ export default function Slider() {
       setShowPic3(true);
     }
 
-    if (currentIndex <= 1) setCurrentIndex(1);
-    //console.log(currentIndex);
+    console.log(currentIndex);
   };
-  const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={50} />;
-  const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={50} />;
-  const img3 = <Image src={img_3} alt="laptop-img" width={1300} height={50} />;
 
   return (
     <div className="relative">
       {
-        <div className="sm:ml-2 max-sm:w-100 ">
-          {showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}
+        <div className="sm:ml-2 max-sm:w-96 ">
+          {showPic1 ? (
+            <Image src={img_1} alt="laptop-img" width={1400} height={50} />
+          ) : showPic2 ? (
+            <Image src={img_2} alt="laptop-img" width={1400} height={50} />
+          ) : (
+            <Image src={img_3} alt="laptop-img" width={1300} height={50} />
+          )}
         </div>
       }
 
@@ -75,18 +78,18 @@ export default function Slider() {
         <div className="relative bottom-18 max-sm:top-0 text-stone-900 ">
           <FaCaretLeft
             onClick={prevSlide}
-            className="absolute left-120 top-20 bg-stone-100 rounded p-1 ml-5  "
+            className="absolute left-120 max-sm:left-0 top-20 bg-stone-100 rounded p-1 ml-5  "
           />
         </div>
 
         <div className="relative bottom-18 right-0 max-sm:top-0 text-stone-900">
           <FaCaretRight
             onClick={nextSlide}
-            className="absolute right-130 top-20 bg-stone-100 rounded p-1  mr-5"
+            className="absolute right-130 top-20 max-sm:right-5 bg-stone-100 rounded p-1  mr-5"
           />
         </div>
       </div>
-      <div className="relative left-160 w-20 bg-stone-300 text-zinc-900 px-3 rounded-xl m-4 sm:left-70 md:left-85 lg:left-150 max-sm:left-40 ">
+      <div className="relative left-160  w-20 bg-stone-300 text-zinc-900 px-3 rounded-xl m-4 sm:left-70 md:left-85 lg:left-150 max-sm:left-40 ">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />
