@@ -14,7 +14,7 @@ export default function SubMenu() {
           }}
           className="sm:text-sm sm:ml-2 lg:text-2xl max-sm:text-sm max-sm:w-102"
         >
-          <li className="max-sm:p-1 max-sm:mx-2">
+          <li className="max-sm:p-1 max-sm:mx-2 border-b-4 border-red-600 pb-1">
             <Link href={"/products"}>Laptops </Link>{" "}
           </li>
           <li className="max-sm:p-1 ">

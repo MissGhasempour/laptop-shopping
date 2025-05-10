@@ -33,7 +33,6 @@ export default function Slider() {
       setShowPic1(false);
     }
     if (currentIndex >= 3) setCurrentIndex(1);
-    //console.log(currentIndex);
   };
 
   // Function to go to the previous image
@@ -41,7 +40,8 @@ export default function Slider() {
     // setCurrentIndex(
     //   (prevIndex) => (prevIndex - 1 + images.length) % images.length
     // );
-    setCurrentIndex(currentIndex - 1);
+    if (currentIndex <= 1) setCurrentIndex(3);
+    else setCurrentIndex(currentIndex - 1);
     if (currentIndex === 2) {
       setShowPic2(true);
       setShowPic1(false);
@@ -79,6 +79,7 @@ export default function Slider() {
         />
       </div>
       <div className="relative left-160 w-20 bg-stone-300 px-3 rounded-xl m-4 ">
+
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />

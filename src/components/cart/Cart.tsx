@@ -22,7 +22,7 @@ export default function CartIcon() {
   useEffect(() => {
     setUrl(window.location.href);
   },[])
-  // console.log(url.length)
+  console.log(url.length)
 
   const add = () => {
     setProductsCount(productsCount + 1);
@@ -40,7 +40,7 @@ export default function CartIcon() {
       return number;
     } else return;
   });
-  console.log(isProduct);
+  //console.log(isProduct);
 
   return (
     <div className="bg-zinc-100 p-4 text-stone-900">
@@ -57,11 +57,11 @@ export default function CartIcon() {
           ProductInfo
         </Link>{" "}
         {"> "}
-        <Link href={`/${url[30]}`}>Cart</Link>
+        <Link href={`/cart-id/${url[30]}`}>Cart</Link>
       </div>
 
-      <div className=" ml-100 my-20 max-lg:ml-20">
-        <div className="w-50 m-4 ml-30">
+      <div className="  my-20 ">
+        <div className=" m-4 ml-120 max-lg:ml-20">
           <Image
             src={
               url[30] === "0"
@@ -87,11 +87,11 @@ export default function CartIcon() {
             alt="laptop"
             width={400}
             height={50}
-            className="m-2 "
+            className="m-2 max-lg:w-50"
           ></Image>
         </div>
-        <div className="mt-10 ml-40">
-          <div className="m-2 text-stone-900 ml-10">
+        <div className="mt-10 ">
+          <div className="m-2 text-stone-900 ml-150 max-sm:ml-36">
             {url[30] === "0" ? (
               <p>cost : 23$ x{productsCount}</p>
             ) : url[30] === "1" ? (
@@ -99,14 +99,14 @@ export default function CartIcon() {
             ) : url[30] === "2" ? (
               <p>cost : 10$ x{productsCount} </p>
             ) : (
-              <div></div>
+              <p>cost : 23$ x{productsCount}</p>
             )}
           </div>
 
           {numbers.map((number) => {
             if (url[30] === number.toString()) {
               return (
-                <div className="flex" key={number}>
+                <div className="flex max-sm:ml-25 ml-140" key={number}>
                   <button
                     onClick={add}
                     className="block px-2 bg-stone-900 rounded text-green-600 m-2 w-10 text-xl"
@@ -130,12 +130,12 @@ export default function CartIcon() {
             }
           })}
           {!isProduct ? (
-            <h1 className="text-red-600 relative right-25 ">
+            <h1 className="text-red-600 ml-130 max-lg:ml-5">
               You'r cart is empty please choose the products!
             </h1>
           ) : null}
 
-          <div className="m-2 text-green-600 ml-10 relative ">
+          <div className="m-2 text-green-600 ml-150 max-lg:ml-30 ">
             {url[30] === "0" ? (
               <h2>payment : {23 * productsCount} $ </h2>
             ) : url[30] === "1" ? (

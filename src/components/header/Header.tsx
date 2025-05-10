@@ -24,7 +24,7 @@ export default async function Header({
           <a href="/filter-products">
             <TbFilterSearch className=" text-4xl relative top-7 left-2 sm:text-xl sm:ml-7 lg:text-4xl max-sm:text-xl max-sm:left-0 max-sm:top-3 " />
           </a>
-          <span className="text-2xl max-sm:text-xl max-lg:text-xl">filter</span>
+          <p className="text-2xl max-sm:text-xl max-sm:mt-3 max-lg:text-xl">filter</p>
         </div>
         
         <ProfileIcon />
