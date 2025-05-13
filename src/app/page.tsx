@@ -3,8 +3,8 @@ import Blog from "./components/blog/Blog";
 import Categories from "./components/categories/Categories";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import CartIcon from "./components/cartIcon/CartIcon";
-import Logo from "./components/logo/Logo";
+import CartIcon from "./components/navbar/[cartId]/CartIcon";
+import Logo from "./components/navbar/logo/Logo";
 import Menu from "./components/navbar/menu/Menu";
 import { MdOutlineNewLabel } from "react-icons/md";
 //import SearchBar from "./components/navbar/searchBar/searchBar";
@@ -19,7 +19,7 @@ export default async function Page() {
     <div>
       <div className="flex">
         <Logo />
-        <MdOutlineNewLabel className="relative left-267 top-3 text-3xl text-red-500"/>
+        <MdOutlineNewLabel className="relative left-105 top-3 text-3xl text-red-500"/>
         <CartIcon />
       </div>
       <Menu />

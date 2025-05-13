@@ -2,27 +2,37 @@
 
 import { useState, MouseEventHandler } from "react";
 import DataInfo from "./datainfo";
-import FilterData from "../filter/filterData";
-import SearchBar from "../../../components/navbar/searchBar/searchBar";
+import FilterData from "./filterData";
+import SearchBar from "../components/navbar/searchBar/searchBar";
 // import Helper from "../helper/helper";
 export default function GetApi({
   res,
-  filter
 }: {
   res: [
     { culture: string; aliases: string },
     { culture: string; aliases: string; name: string },
     { culture: string; aliases: string; books: string[] }
   ];
-  filter : React.MouseEventHandler<HTMLInputElement>;
 }) {
   // Helper()
-  //console.log(res)
+  // console.log(res)
+
   const [displaly, setDisplay] = useState(true);
   const [brandName, setBrandName] = useState([""]);
   const [displayedItem, setDisplayedItem] = useState(true);
- 
-
+  const filter: MouseEventHandler<HTMLInputElement> = (e) => {
+    if (e.currentTarget.defaultValue === "Braavosi") {
+      setBrandName([res[0].culture]);
+    } else if (e.currentTarget.defaultValue === "Walder")
+      setBrandName(["Walder"]);
+    else setBrandName([""]);
+    if (e.currentTarget.checked) {
+      setDisplay(false);
+    } else {
+      setDisplay(true);
+      setDisplayedItem(true);
+    }
+  };
   return (
     <div className="flex m-3">
       {displaly ? (
