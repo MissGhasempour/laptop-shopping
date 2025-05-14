@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import img_2 from "@/images/laptop-3.jpg";
-import img_1 from "@/images/lenovo-sensational-spring-sale-2025-w1.jpg";
-import img_3 from "@/images/laptop-1.jpg";
+import img_2 from "@/images/walls-io-Dn8XDbY3shg-unsplash.jpg";
+import img_3 from "@/images/luke-thorn-1zqhNlDaltE-unsplash.jpg";
+import img_1 from "@/images/brandon-romanchuk-rQb-17JmGmk-unsplash.jpg";
 import { FaCaretLeft } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 import React, { useState } from "react";
@@ -59,27 +59,59 @@ export default function Slider() {
     if (currentIndex <= 1) setCurrentIndex(3);
     //console.log(currentIndex);
   };
-  const img1 = <Image src={img_1} alt="laptop-img" width={1400} height={100} />;
-  const img2 = <Image src={img_2} alt="laptop-img" width={1400} height={100} />;
-  const img3 = <Image src={img_3} alt="laptop-img" width={1400} height={100} />;
 
   return (
     <div className="relative">
-      {<div>{showPic1 ? img1 : showPic2 ? img2 : showPic3 ? img3 : img1}</div>}
+      {
+        <div>
+          {showPic1 ? (
+            <Image
+              src={img_1}
+              alt="laptop-img"
+              width={1400}
+              height={100}
+              className="2xl:w-800"
+            />
+          ) : showPic2 ? (
+            <Image
+              src={img_2}
+              alt="laptop-img"
+              width={1400}
+              height={100}
+              className="2xl:w-800"
+            />
+          ) : showPic3 ? (
+            <Image
+              src={img_3}
+              alt="laptop-img"
+              width={1400}
+              height={100}
+              className="2xl:w-800"
+            />
+          ) : (
+            <Image
+              src={img_1}
+              alt="laptop-img"
+              width={1400}
+              height={100}
+              className="2xl:w-800"
+            />
+          )}
+        </div>
+      }
 
-      <div className="controls">
+      <div className="controls relative">
         <FaCaretLeft
           onClick={prevSlide}
-          className="absolute left-120 top-100 bg-stone-100 rounded p-1 ml-12 text-3xl"
+          className="absolute left-120 top-5 max-xl:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-20"
         />
 
         <FaCaretRight
           onClick={nextSlide}
-          className="absolute left-210 top-100 bg-stone-100 rounded p-1 text-3xl mr-20"
+          className="absolute left-210 top-5 max-xl:left-160 2xl:left-460 bg-stone-100 max-sm:left-70 text-stone-900 rounded p-1 text-3xl mr-20"
         />
       </div>
-      <div className="relative left-160 w-20 bg-stone-300 px-3 rounded-xl m-4 ">
-
+      <div className="relative left-160 w-20 max-sm:left-40 max-xl:left-100 px-3 rounded-xl m-4 2xl:left-400">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />

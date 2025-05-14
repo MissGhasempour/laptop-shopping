@@ -19,7 +19,7 @@ export default function Result({
 }) {
   return (
     <>
-      <div className="m-4 bg-zinc-100 ml-50 py-20 w-160 max-lg:ml-10 max-sm:ml-0">
+      <div className="m-4 bg-zinc-100 ml-50 py-20 w-160 max-xl:ml-10 max-sm:ml-0 2xl:w-800">
         {/* <h1 className="text-blue-600 m-4">{brandname}</h1> */}
         <Image
           src={
@@ -40,7 +40,7 @@ export default function Result({
           width={500}
         />
         <Link
-          href={`/product-card/${id}`}
+          href={`/product-info/${id}`}
           className="max-sm:ml-13 max-sm:w-25  text-blue-600 text-center hover:text-zinc-100 hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-45 my-8 rounded-md ml-54 max-lg:ml-40 max-lg:w-30"
         >
           details ...

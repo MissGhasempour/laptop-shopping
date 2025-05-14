@@ -18,7 +18,7 @@ import Image from "next/image";
 export default function CartIcon() {
   const [productsCount, setProductsCount] = useState(0);
   const [numbers, setNumbers] = useState(["0", 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-  const [url,setUrl] =  useState([""]);
+  const [url,setUrl] =  useState("");
   useEffect(() => {
     setUrl(window.location.href);
   },[])
@@ -60,8 +60,8 @@ export default function CartIcon() {
         <Link href={`/cart-id/${url[30]}`}>Cart</Link>
       </div>
 
-      <div className="  my-20 ">
-        <div className=" m-4 ml-120 max-lg:ml-20">
+      <div className="my-20">
+        <div className=" m-4 ml-120 max-xl:ml-20">
           <Image
             src={
               url[30] === "0"
@@ -90,8 +90,8 @@ export default function CartIcon() {
             className="m-2 max-lg:w-50"
           ></Image>
         </div>
-        <div className="mt-10 ">
-          <div className="m-2 text-stone-900 ml-150 max-sm:ml-36">
+        <div className="mt-10">
+          <div className="m-2 text-stone-900 ml-150 max-sm:ml-36 max-xl:ml-60">
             {url[30] === "0" ? (
               <p>cost : 23$ x{productsCount}</p>
             ) : url[30] === "1" ? (
@@ -106,7 +106,7 @@ export default function CartIcon() {
           {numbers.map((number) => {
             if (url[30] === number.toString()) {
               return (
-                <div className="flex max-sm:ml-25 ml-140" key={number}>
+                <div className="flex max-sm:ml-25 ml-140 max-xl:ml-50" key={number}>
                   <button
                     onClick={add}
                     className="block px-2 bg-stone-900 rounded text-green-600 m-2 w-10 text-xl"
@@ -130,12 +130,12 @@ export default function CartIcon() {
             }
           })}
           {!isProduct ? (
-            <h1 className="text-red-600 ml-130 max-lg:ml-5">
+            <h1 className="text-red-600 ml-130 max-xl:ml-35">
               You'r cart is empty please choose the products!
             </h1>
           ) : null}
 
-          <div className="m-2 text-green-600 ml-150 max-lg:ml-30 ">
+          <div className="m-2 text-green-600 ml-150 max-xl:ml-60 ">
             {url[30] === "0" ? (
               <h2>payment : {23 * productsCount} $ </h2>
             ) : url[30] === "1" ? (

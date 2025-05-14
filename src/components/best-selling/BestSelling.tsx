@@ -1,4 +1,4 @@
-import getProducts from "@/app/lib/api/getProducts";
+import getProducts from "@/lib/api/getProducts";
 import BestProduct from "./BestProduct";
 
 export default async function BestSelling() {

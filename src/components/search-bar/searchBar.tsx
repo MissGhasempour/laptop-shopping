@@ -5,9 +5,9 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function SearchBar({
   res,
-
+  
 }: {
-  res : [
+  res: [
     { culture: string; aliases: string },
     { culture: string; aliases: string; name: string },
     { culture: string; aliases: string; books: string[] }
@@ -15,7 +15,7 @@ export default function SearchBar({
   display: any;
 }) {
   const [searchProduct, setSearchProduct] = useState("");
-  const [display, setDisplay] = useState("false");
+  const [display, setDisplay] = useState(false);
   const searchParams = useSearchParams();
   const [queryParam, setQueryParam] = useState("");
   const [param, setParam] = useState("");
@@ -42,10 +42,12 @@ export default function SearchBar({
   const search: MouseEventHandler<HTMLInputElement> = (e) => {
     if (e.currentTarget.value === res[0].culture) {
       setSearchProduct(res[0].culture);
-      display.value = "true";
+      // display.value = "true";
+      setDisplay(true);
     } else {
       setSearchProduct("");
-      display.value = "false";
+      // display.value = "false";
+      setDisplay(false);
     }
   };
   return (
@@ -63,7 +65,7 @@ export default function SearchBar({
         href={"/result-products"}
         className="text-blue-400"
         onClick={() => {
-          setDisplay("true");
+          setDisplay(true);
           router.push("result-products");
         }}
       >

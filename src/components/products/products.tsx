@@ -8,7 +8,7 @@ export default function Products({
   res: [{ culture: string; aliases: string }];
 }) {
   return (
-    <div className="flex m-3 ">
+    <div className="flex m-3">
       {res.map((product, index) => (
         <ProductInfo
           id={index}

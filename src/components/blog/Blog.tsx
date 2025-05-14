@@ -6,7 +6,7 @@ export default function Blog() {
       <Image
         src={img}
         alt="laptop-pic"
-        className="mt-50 sm:w-166 sm:mt-30 md:w-192 lg:w-317"
+        className="mt-50 sm:w-166 sm:mt-30 md:w-192 lg:w-317 2xl:w-800"
       />
       <h1 className="m-4">Lenovo Gaming</h1>
       <p className="m-4">

@@ -63,7 +63,7 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <form action="#" onSubmit={(e) => submit(e)} className=" m-8 ml-130 max-lg:ml-10 overflow-hidden">
+      <form action="#" onSubmit={(e) => submit(e)} className=" m-8 ml-130 max-xl:ml-90 overflow-hidden 2xl:ml-10">
         <label htmlFor="username" >Username </label>
         <br />
         <input

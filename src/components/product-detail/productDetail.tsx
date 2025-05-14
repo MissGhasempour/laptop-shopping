@@ -21,7 +21,7 @@ export default function ProductDefinition({
     { culture: string; aliases: string; books: string[] }
   ];
 }) {
-    const [url,setUrl] =  useState([""]);
+    const [url,setUrl] =  useState("");
     useEffect(() => {
       setUrl(window.location.href);
     },[])
@@ -29,7 +29,7 @@ export default function ProductDefinition({
 
   const addToCart = () => {};
   return (
-    <div className="bg-zinc-100 mt-20 py-7">
+    <div className="bg-zinc-100 mt-20 py-7 lg:w-220 ">
       <div className="text-stone-900">
         <a href="/" className="inline-block my-4 mx-2 text-blue-700">
           Home
@@ -41,7 +41,7 @@ export default function ProductDefinition({
 
       </div>
 
-      <div className="flex  px-62 py-10" >
+      <div className="flex max-sm:inline px-62 py-10 max-xl:inline" >
         <Image
           src={
             url[35] === "0"
@@ -70,7 +70,7 @@ export default function ProductDefinition({
           className="m-2"
         ></Image>
         <div className="mt-5">
-          <div className="text-center">
+          <div className="text-center max-xl:text-left">
             {url[35] === "0" ? (
               <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
             ) : url[35] === "1" ? (

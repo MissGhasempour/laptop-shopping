@@ -12,7 +12,7 @@ export default function FilterProduct() {
   const [param, setParam] = useState("");
 
   const filterProducts = useCallback(
-    (value: any, checked: boolean) => {
+    (value: any) => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("brandname", value);
       setParam(params.toString());
@@ -37,24 +37,14 @@ export default function FilterProduct() {
           <h2 className="text-red-600 my-2">Brand</h2>
           <input
             type="radio"
-            onClick={(e) =>
-              filterProducts(
-                e.currentTarget.value,
-                (e.currentTarget.defaultChecked = true)
-              )
-            }
+            onClick={(e) => filterProducts(e.currentTarget.value)}
             value={"Braavosi"}
             name="filter"
           />{" "}
           Braavosi <br />
           <input
             type="radio"
-            onClick={(e) =>
-              filterProducts(
-                e.currentTarget.value,
-                e.currentTarget.defaultChecked
-              )
-            }
+            onClick={(e) => filterProducts(e.currentTarget.value)}
             value={"Walder"}
             name="filter"
           />{" "}
@@ -62,39 +52,25 @@ export default function FilterProduct() {
           <br />
           <input
             type="radio"
-            onClick={(e) =>
-              filterProducts(
-                e.currentTarget.value,
-                e.currentTarget.defaultChecked
-              )
-            }
+            onClick={(e) => filterProducts(e.currentTarget.value)}
             value={"Lamprey"}
             name="filter"
           />{" "}
           Lamprey <br />
           <input
             type="radio"
-            onClick={(e) =>
-              filterProducts(
-                e.currentTarget.value,
-                e.currentTarget.defaultChecked
-              )
-            }
+            onClick={(e) => filterProducts(e.currentTarget.value)}
             value={"Merling"}
             name="filter"
           />{" "}
           Merling <br />
           <input
             type="radio"
-            onClick={(e) =>
-              filterProducts(
-                e.currentTarget.value,
-                e.currentTarget.defaultChecked
-              )
-            }
+            onClick={(e) => filterProducts(e.currentTarget.value)}
             value={"Crackbones"}
             name="filter"
-          /> Crackbones
+          />{" "}
+          Crackbones
         </div>
       </div>
     </div>

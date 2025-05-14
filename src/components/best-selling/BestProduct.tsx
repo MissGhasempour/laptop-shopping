@@ -23,7 +23,7 @@ export default function BestProduct({
     router.push(`/cart-id/${index}`);
   };
   return (
-    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50">
+    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-70">
       <div>
         <div className="relative left-80 top-6 sm:left-27 max-sm:left-20 ">
           <FaRegHeart className="m-2 text-red-600" />

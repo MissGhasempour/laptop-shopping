@@ -6,27 +6,20 @@ import { MdOutlineNewLabel } from "react-icons/md";
 import SearchBar from "../search-bar/searchBar";
 import { TbFilterSearch } from "react-icons/tb";
 
-export default async function Header({
-  res,
-}: {
-  res: [
-    { culture: string; aliases: string },
-    { culture: string; aliases: string; name: string },
-    { culture: string; aliases: string; books: string[] }
-  ];
-}) {
+export default async function Header() {
   return (
     <header>
       <div className="flex">
         <Logo />
-        {/* <SearchBar res={res} /> */}
         <div className="sm:text-sm">
           <a href="/filter-products">
             <TbFilterSearch className=" text-4xl relative top-7 left-2 sm:text-xl sm:ml-7 lg:text-4xl max-sm:text-xl max-sm:left-0 max-sm:top-3 " />
           </a>
-          <p className="text-2xl max-sm:text-xl max-sm:mt-3 max-lg:text-xl">filter</p>
+          <p className="text-2xl max-sm:text-xl max-sm:mt-3 max-lg:text-xl">
+            filter
+          </p>
         </div>
-        
+
         <ProfileIcon />
 
         <CartIcon />
