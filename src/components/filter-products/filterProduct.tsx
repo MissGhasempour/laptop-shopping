@@ -1,67 +1,100 @@
 "use client";
-import React, { useCallback } from "react";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import React, { useCallback, useEffect, useState } from "react";
 
 export default function FilterProduct() {
   const router = useRouter();
-  const pathname = usePathname();
+  let pathname = usePathname();
+
   const searchParams = useSearchParams();
+  const [queryParam, setQueryParam] = useState("")
+  const [param, setParam] = useState("")
 
   const filterProducts = useCallback(
-    (name: string, value: any) => {
+    (value: any, checked: boolean) => {
       const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value.currentTarget.value);
-
-      return params.toString();
+      params.set("brandname", value);
+      setParam(params.toString())
+      setQueryParam(params?.toString())
+      return router.push(pathname + "?" + params.toString());
     },
+
     [searchParams]
   );
 
+
+  useEffect(()=>{
+    queryParam?.length !== 0 ? router.push(pathname + "?" + param?.toString()) : router.push(pathname)
+
+  },[queryParam])
+
   return (
     <div>
-      <div className="flex">
+      <div className="flex m-4">
         <div>
           <h1 className="mb-5">Filter by specs</h1>
           <h2 className="text-red-600 my-2">Brand</h2>
           <input
-            type="checkbox"
+            type="radio"
             onClick={(e) =>
-              router.push(pathname + "?" + filterProducts("brandname", e))
+              filterProducts(
+                e.currentTarget.value,
+                (e.currentTarget.defaultChecked = true)
+              )
             }
             value={"Braavosi"}
+            name="filter"
+           
           />{" "}
           Braavosi <br />
           <input
-            type="checkbox"
+            type="radio"
             onClick={(e) =>
-              router.push(pathname + "?" + filterProducts("brandname", e))
+              filterProducts(
+                e.currentTarget.value,
+                e.currentTarget.defaultChecked
+              )
             }
             value={"Walder"}
+            name="filter"
           />{" "}
           Walder
           <br />
           <input
-            type="checkbox"
+            type="radio"
             onClick={(e) =>
-              router.push(pathname + "?" + filterProducts("brandname", e))
+              filterProducts(
+                e.currentTarget.value,
+                e.currentTarget.defaultChecked
+              )
             }
             value={"Lamprey"}
+            name="filter"
           />{" "}
           Lamprey <br />
           <input
-            type="checkbox"
+            type="radio"
             onClick={(e) =>
-              router.push(pathname + "?" + filterProducts("brandname", e))
+              filterProducts(
+                e.currentTarget.value,
+                e.currentTarget.defaultChecked
+              )
             }
             value={"Merling"}
+            name="filter"
           />{" "}
           Merling <br />
           <input
-            type="checkbox"
+            type="radio"
             onClick={(e) =>
-              router.push(pathname + "?" + filterProducts("brandname", e))
+              filterProducts(
+                e.currentTarget.value,
+                e.currentTarget.defaultChecked
+              )
             }
             value={"Crackbones"}
+            name="filter"
           />{" "}
           Crackbones <br />
         </div>

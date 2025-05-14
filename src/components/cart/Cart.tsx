@@ -2,18 +2,24 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
-import { FaCartArrowDown } from "react-icons/fa";
-import img1 from "@/app/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
-import img2 from "@/app/images/laptop-1.jpg";
-import img3 from "@/app/images/laptop-3.jpg";
+import img_2 from "@/images/dell-ocAuPlfZXEc-unsplash.jpg";
+import img_1 from "@/images/taan-huyn-RyGOh7pRzAI-unsplash.jpg";
+import img_3 from "@/images/james-mckinven-tpuAo8gVs58-unsplash.jpg";
+import img_4 from "@/images/anete-lusina-zwsHjakE_iI-unsplash.jpg";
+import img_5 from "@/images/luis-quintero-aUnkqeCvz80-unsplash.jpg";
+import img_6 from "@/images/nicolas-bichon-ZhV4iqAXxyA-unsplash.jpg";
+import img_7 from "@/images/workperch-wnZ3ai3_idw-unsplash.jpg";
+import img_8 from "@/images/kari-shea-1SAnrIxw5OY-unsplash.jpg";
+import img_9 from "@/images/sreej-pradhan-msKaizMpoRs-unsplash.jpg";
+import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
 
 export default function CartIcon() {
   const [productsCount, setProductsCount] = useState(0);
-  const [numbers, setNumbers] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const [numbers, setNumbers] = useState(["0", 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
   const url = window.location.href;
-  console.log(url.length,url);
+  console.log(url.length, url);
 
   const add = () => {
     setProductsCount(productsCount + 1);
@@ -27,11 +33,12 @@ export default function CartIcon() {
   };
 
   const isProduct = numbers.find((number) => {
+    console.log(number);
     if (url[22] === number.toString()) {
       return number;
     } else return;
   });
-  //console.log(isProduct);
+  console.log(isProduct);
 
   return (
     <div>
@@ -44,28 +51,41 @@ export default function CartIcon() {
           Products
         </Link>{" "}
         {"> "}
-        <Link
-          href={`/product-info/${url[22]}`}
-          className="text-blue-600"
-        >
+        <Link href={`/product-info/${url[22]}`} className="text-blue-600">
           ProductInfo
         </Link>{" "}
         {"> "}
         <Link href={`/${url[22]}`}>Cart</Link>
       </div>
-      <a href={"/cart-id"}>
-        <FaCartArrowDown className="text-6xl  mx-10 my-2 absolute top-0 right-0" />
-      </a>
+
       <div className="w-100 m-4">
-        {url[22] === "0" ? (
-          <Image src={img3} alt="laptop-pic" />
-        ) : url[22] === "1" ? (
-          <Image src={img2} alt="laptop-pic" />
-        ) : url[22] === "2" ? (
-          <Image src={img1} alt="laptop-pic" />
-        ) : (
-          <div></div>
-        )}
+      <Image
+        src={
+          url[22] === "0"
+            ? img_2
+            : url[22] === "1"
+            ? img_1
+            : url[22] === "2"
+            ? img_3
+            : url[22] === "3"
+            ? img_4
+            : url[22] === "4"
+            ? img
+            : url[22] === "5"
+            ? img_5
+            : url[22] === "6"
+            ? img_6
+            : url[22] === "7"
+            ? img_7
+            : url[22] === "8"
+            ? img_8
+            : img_9
+        }
+        alt="laptop"
+        width={400}
+        height={50}
+        className="m-2"
+      ></Image>
       </div>
 
       <div className="m-2">
@@ -75,9 +95,7 @@ export default function CartIcon() {
           <p>cost : 45$ x{productsCount} </p>
         ) : url[22] === "2" ? (
           <p>cost : 10$ x{productsCount} </p>
-        ) : (
-          <div></div>
-        )}
+        ) : <p>cost : 10$ x{productsCount} </p>}
       </div>
 
       {numbers.map((number) => {
@@ -120,7 +138,7 @@ export default function CartIcon() {
         ) : url[22] === "2" ? (
           <h2>payment : {10 * productsCount} $ </h2>
         ) : (
-          <div></div>
+          <h2>payment : {10 * productsCount} $ </h2>
         )}
       </div>
     </div>

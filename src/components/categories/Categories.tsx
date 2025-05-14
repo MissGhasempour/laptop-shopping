@@ -7,7 +7,9 @@ import classes from "./classes.module.css";
 export default function Categories() {
   return (
     <div>
-        <h1 style={{fontWeight:'bold', fontSize:'30px'}}>Explore Products at Lenovo</h1>
+
+        <h1 style={{fontWeight:'bold'}} className="m-6 mb-20 sm:text-xl lg:text-3xl max-sm:text-xl max-sm:mb-10 mt-40">Explore Products at Lenovo</h1>
+
       <div>
         <ul
           style={{

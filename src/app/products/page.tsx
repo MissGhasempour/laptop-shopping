@@ -1,5 +1,7 @@
 import Products from "@/components/products/products";
 
-export default function ProductsPage() {
-  return <Products />;
+export default async function ProductsPage() {
+  const res = await getProducts();
+  
+  return <Products res={res} />;
 }

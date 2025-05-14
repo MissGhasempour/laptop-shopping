@@ -1,25 +1,25 @@
-"use server";
+"use client";
 import React from "react";
-import ProductInfo from "../product-info/productInfo";
-import getProducts from "@/app/lib/api/getProducts";
+import ProductInfo from "../product-card/productInfo";
 
-export default async function Products() {
-  const res = await getProducts();
-
+export default function Products({
+  res,
+}: {
+  res: [{ culture: string; aliases: string }];
+}) {
+  
   return (
-    <div className="flex m-3">
-      <div>
-        <div className="flex">
-          <ProductInfo index={[0]} res={res} />
-          <ProductInfo index={[1]} res={res} />
-          <ProductInfo index={[2]} res={res} />
-        </div>
-
-        <div className="mx-10 flex">
-          <ProductInfo index={[3]} res={res} />
-          <ProductInfo index={[4]} res={res} />
-        </div>
-      </div>
+    <div className="flex m-3 ">
+      {res.map((product, index) => (
+        <ProductInfo
+          id={index}
+          isPurple={!index}
+          culture={product.aliases}
+          books={product.books[0]}
+          imageSrc=""
+          key={product.aliases}
+        />
+      ))}
     </div>
   );
 }

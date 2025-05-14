@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { useActionState } from "react";
-import { signUp } from "@/app/lib/form-inputs/zod/actions";
+import { signUp } from "@/lib/form-inputs/zod/actions";
 import { useRouter } from "next/navigation";
 import ProfileInfo from "@/components/profile/dashboard/profileInfo";
-import { actions } from "@/app/lib/form-inputs/zod/actions";
+import { actions } from "@/lib/form-inputs/zod/actions";
 export default function SignUp() {
   const [state, action] = useActionState(signUp, {});
   const router = useRouter();
