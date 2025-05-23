@@ -1,16 +1,17 @@
 "use client";
 import React from "react";
-import ProductInfo from "../product-card/productInfo";
+import ProductCard from "../product-card/productCard";
 
 export default function Products({
   res,
 }: {
-  res: [{ culture: string; aliases: string }];
+  res: [{ culture: string; aliases: string ; books : string}];
 }) {
+  console.log(res[0])
   return (
-    <div className="flex m-3">
+    <div className="flex m-3 mt-20">
       {res.map((product, index) => (
-        <ProductInfo
+        <ProductCard
           id={index}
           isPurple={!index}
           culture={product.aliases}

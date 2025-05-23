@@ -1,13 +1,10 @@
 "use client";
-import {
-  ChangeEventHandler,
-  FormEventHandler,
-  MouseEventHandler,
-  useState,
-} from "react";
+import { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { setCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
-import { number } from "zod";
+import Image from "next/image";
+import img from "@/images/blog-famous-logo-brandsX_1200x1200-e1690187170634.webp";
+
 export default function ProfileTest() {
   const [usernameMessage, setUsernameMessage] = useState("");
   const [age, setAge] = useState("");
@@ -63,51 +60,56 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <form action="#" onSubmit={(e) => submit(e)} className=" m-8 ml-130 max-xl:ml-90 overflow-hidden 2xl:ml-10">
-        <label htmlFor="username" >Username </label>
+      <h1 className="ml-170 text-2xl pt-4">Login</h1>
+      <form
+        action="#"
+        onSubmit={(e) => submit(e)}
+        className="border-1 border-zinc-100 rounded-xl w-100 fill-white shadow-xl p-10 m-8 ml-130 max-xl:ml-90 overflow-hidden 2xl:ml-10"
+      >
+        <label htmlFor="username">Username </label>
         <br />
         <input
           type="text"
           onChange={(e) => handleUsername(e)}
           required
-          className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-4  w-70 p-1 "
+          className="border-2 rounded border-gray-500 hover:border-red-600  m-2  w-70 p-2 "
         />
         <br />
-        <p className="mb-12">{usernameMessage} </p>
+        <p className="mb-5">{usernameMessage} </p>
         <label htmlFor="password">Password </label>
         <br />
         <input
           type="password"
           onChange={(e) => handlePassword(e.currentTarget.value)}
           required
-          className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-2 w-70 p-1 "
+          className="border-2 rounded border-gray-500 hover:border-red-600  m-2 w-70 p-2 "
         />
         <br />
-        <p className="mb-12">{password} </p>
+        <p className="mb-5">{password} </p>
         <label htmlFor="email">Email </label>
         <br />
         <input
           type="email"
           onChange={(e) => handleEmail(e.currentTarget.value)}
           required
-          className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-2 w-70 p-1 "
+          className="border-2 rounded border-gray-500 hover:border-red-600  m-2 w-70 p-2 "
         />
         <br />
-        <p className="mb-12">{email} </p>
+        <p className="mb-5">{email} </p>
         <label htmlFor="age">Age </label>
         <br />
         <input
           type="number"
           onChange={(e) => handleAge(e.currentTarget.value)}
           required
-          className="border-2 border-gray-500 hover:border-red-600 rounded-xl m-2 w-70 p-1 "
+          className="border-2 rounded border-gray-500 hover:border-red-600  m-2 w-70 p-2 "
         />
         <br />
-        <p className="mb-12">{age} </p>
+        <p className="mb-5">{age} </p>
         <input
           type="submit"
           value="submit"
-          className="relative left-20 m-4 border-2 p-2 w-30 rounded-xl border-zinc-100 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 hover:border-zinc-100"
+          className="transition duration-300 ease-in-out relative  my-4 border-2 p-2 w-73 rounded-xl border-blue-700 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 "
         />
       </form>
     </>

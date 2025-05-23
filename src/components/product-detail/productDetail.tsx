@@ -12,7 +12,7 @@ import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function ProductDefinition({
+export default function ProductDetail({
   res,
 }: {
   res: [
@@ -21,15 +21,15 @@ export default function ProductDefinition({
     { culture: string; aliases: string; books: string[] }
   ];
 }) {
-    const [url,setUrl] =  useState("");
-    useEffect(() => {
-      setUrl(window.location.href);
-    },[])
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    setUrl(window.location.href);
+  }, []);
   console.log(url.length);
 
   const addToCart = () => {};
   return (
-    <div className="bg-zinc-100 mt-20 py-7 lg:w-220 ">
+    <div className="bg-zinc-100 mt-20 py-7">
       <div className="text-stone-900">
         <a href="/" className="inline-block my-4 mx-2 text-blue-700">
           Home
@@ -37,11 +37,9 @@ export default function ProductDefinition({
         {" >  "}
         <a href={`/product-info/${url[35]}`}> Details</a>
       </div>
-      <div>
+      <div></div>
 
-      </div>
-
-      <div className="flex max-sm:inline px-62 py-10 max-xl:inline" >
+      <div className="flex max-sm:inline px-62 py-10 max-xl:inline">
         <Image
           src={
             url[35] === "0"

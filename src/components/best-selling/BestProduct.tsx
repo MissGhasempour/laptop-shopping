@@ -23,7 +23,7 @@ export default function BestProduct({
     router.push(`/cart-id/${index}`);
   };
   return (
-    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-70">
+    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-70 w-80 transition duration-300 ease-in-out ">
       <div>
         <div className="relative left-80 top-6 sm:left-27 max-sm:left-20 ">
           <FaRegHeart className="m-2 text-red-600" />
@@ -71,7 +71,7 @@ export default function BestProduct({
         {/* <p className="m-2 mt-6 text-blue-500 ">{res[index].books[0]} </p> */}
         <button
           onClick={shop}
-          className="bg-zinc-900  w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-35 sm:w-30 max-sm:w-20 max-sm:left-5 max-lg:left-10 "
+          className="cursor-pointer bg-zinc-900  w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-25 sm:w-30 max-sm:w-20 max-sm:left-5 max-lg:left-10 "
         >
           Shop
         </button>

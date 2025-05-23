@@ -11,8 +11,8 @@ export default function Dashboard({
   ];
 }) {
   return (
-    <div className="flex overflow-hidden">
-      <div className="w-50 bg-yellow-500 h-160 max-sm:w-30 max-sm:h-200">
+    <div className="flex overflow-hidden max-sm:h-300 bg-indigo-200 h-200">
+      <div className="w-50 bg-indigo-500 h-160 max-sm:w-30 max-sm:h-300">
         <div className="m-4">
           <Link href={"/test/dashboard-test"}>Profile</Link>
         </div>
@@ -24,13 +24,13 @@ export default function Dashboard({
         </div>
       </div>
       <div className="m-4 flex max-sm:block">
-        <div className="w-70  overflow-hidden h-110 max-lg:h-105  rounded max-sm:h-85 max-sm:mr-4 max-lg:w-60">
+        <div className="w-70 h-110 max-lg:h-105  rounded  max-sm:mr-4 max-lg:w-50">
           <BestProduct res={res || []} index={0} />
         </div>
-        <div className="w-70 overflow-hidden h-110 max-lg:h-105  rounded max-sm:h-85">
+        <div className="w-70 h-110 max-lg:h-105  rounded max-sm:h-85">
           <BestProduct res={res || []} index={1} />
         </div>
-        <div className="w-80 overflow-hidden h-110 max-lg:h-105 max-lg:hidden rounded">
+        <div className=" h-110 max-lg:h-105 max-lg:hidden rounded">
           <BestProduct res={res || []} index={2} />
         </div>
       </div>

@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { SetStateAction } from "react";
 import Link from "next/link";
 import img_2 from "@/images/dell-ocAuPlfZXEc-unsplash.jpg";
 import img_1 from "@/images/taan-huyn-RyGOh7pRzAI-unsplash.jpg";
@@ -11,18 +10,18 @@ import img_5 from "@/images/luis-quintero-aUnkqeCvz80-unsplash.jpg";
 import img_6 from "@/images/nicolas-bichon-ZhV4iqAXxyA-unsplash.jpg";
 import img_7 from "@/images/workperch-wnZ3ai3_idw-unsplash.jpg";
 import img_8 from "@/images/kari-shea-1SAnrIxw5OY-unsplash.jpg";
-import img_9 from "@/images/zoshua-colah-yVG7BJz14lk-unsplash.jpg";
+import img_9 from "@/images/109503917-cartoon-character-with-a-shopping-cart-3d-illustration-internet-shopping.jpg";
 import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
 
 export default function CartIcon() {
   const [productsCount, setProductsCount] = useState(0);
   const [numbers, setNumbers] = useState(["0", 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-  const [url,setUrl] =  useState("");
+  const [url, setUrl] = useState("");
   useEffect(() => {
     setUrl(window.location.href);
-  },[])
-  console.log(url.length)
+  }, []);
+  console.log(url.length);
 
   const add = () => {
     setProductsCount(productsCount + 1);
@@ -43,7 +42,7 @@ export default function CartIcon() {
   //console.log(isProduct);
 
   return (
-    <div className="bg-zinc-100 p-4 text-stone-900">
+    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400">
       <div className="m-4">
         <Link href={"/"} className="text-blue-600">
           Home
@@ -60,7 +59,7 @@ export default function CartIcon() {
         <Link href={`/cart-id/${url[30]}`}>Cart</Link>
       </div>
 
-      <div className="my-20">
+      <div className="my-6">
         <div className=" m-4 ml-120 max-xl:ml-20">
           <Image
             src={
@@ -85,13 +84,13 @@ export default function CartIcon() {
                 : img_9
             }
             alt="laptop"
-            width={400}
-            height={50}
+            width={300}
+            height={30}
             className="m-2 max-lg:w-50"
           ></Image>
         </div>
         <div className="mt-10">
-          <div className="m-2 text-stone-900 ml-150 max-sm:ml-36 max-xl:ml-60">
+          <div className="m-2 text-stone-900 ml-120 max-sm:ml-36 max-xl:ml-60">
             {url[30] === "0" ? (
               <p>cost : 23$ x{productsCount}</p>
             ) : url[30] === "1" ? (
@@ -106,7 +105,10 @@ export default function CartIcon() {
           {numbers.map((number) => {
             if (url[30] === number.toString()) {
               return (
-                <div className="flex max-sm:ml-25 ml-140 max-xl:ml-50" key={number}>
+                <div
+                  className="flex max-sm:ml-25 ml-140 max-xl:ml-50"
+                  key={number}
+                >
                   <button
                     onClick={add}
                     className="block px-2 bg-stone-900 rounded text-green-600 m-2 w-10 text-xl"
@@ -130,12 +132,12 @@ export default function CartIcon() {
             }
           })}
           {!isProduct ? (
-            <h1 className="text-red-600 ml-130 max-xl:ml-35">
+            <h1 className="text-blue-800 ml-120 max-xl:ml-35">
               You'r cart is empty please choose the products!
             </h1>
           ) : null}
 
-          <div className="m-2 text-green-600 ml-150 max-xl:ml-60 ">
+          <div className="m-2 text-green-600 ml-120 max-xl:ml-60 ">
             {url[30] === "0" ? (
               <h2>payment : {23 * productsCount} $ </h2>
             ) : url[30] === "1" ? (
