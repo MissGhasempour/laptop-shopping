@@ -19,8 +19,7 @@ export default function Result({
 }) {
   return (
     <>
-      <div className="m-4 bg-zinc-100 ml-50 py-2 w-160 max-xl:ml-10 max-sm:ml-0 2xl:w-800">
-        {/* <h1 className="text-blue-600 m-4">{brandname}</h1> */}
+      <div className="m-4 bg-zinc-100 ml-50 py-2 w-90 rounded-xl max-md:bg-purple-200 max-xl:ml-10 max-sm:ml-0 max-md:w-60 max-sm:h-60 2xl:w-800 h-100 max-sm:mt-10 max-sm:w-50 max-sm:bg-zinc-100 max-md:h-60">
         <Image
           src={
             brandname === "Walder"
@@ -36,14 +35,14 @@ export default function Result({
               : img2
           }
           alt="laptop-pic"
-          className="m-4 ml-40 max-lg:w-70 max-lg:ml-20  max-sm:ml-0 max-sm:w-50"
+          className="m-4 ml-7 max-lg:w-70 max-lg:ml-10 rounded-xl max-sm:ml-5 max-sm:w-40 max-md:ml-5 max-md:w-50"
           width={300}
         />
         <Link
           href={`/product-info/${id}`}
-          className="max-sm:ml-13 max-sm:w-25  text-blue-600 text-center hover:text-zinc-100 hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-70 my-8 rounded-md ml-44 max-lg:ml-40 max-lg:w-30"
+          className="max-sm:ml-15 max-sm:w-20 max-sm:p-0 max-md:ml-20 text-purple-700 max-md:w-25  text-center hover:text-zinc-100 hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-70 my-8 rounded-md ml-10 max-lg:ml-30 max-lg:w-30"
         >
-          details ...
+          details
         </Link>
       </div>
     </>

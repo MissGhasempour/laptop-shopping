@@ -23,7 +23,7 @@ export default function BestProduct({
     router.push(`/cart-id/${index}`);
   };
   return (
-    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-70 w-80 transition duration-300 ease-in-out ">
+    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-70 w-80 transition duration-300 ease-in-out max-sm:w-60 max-sm:ml-10">
       <div>
         <div className="relative left-80 top-6 sm:left-27 max-sm:left-20 ">
           <FaRegHeart className="m-2 text-red-600" />
@@ -50,28 +50,28 @@ export default function BestProduct({
             <Image
               src={img1}
               alt="laptop-pic"
-              className=" sm:w-100 max-sm:w-40"
+              className="max-sm:w-80"
             />
           ) : index === 1 ? (
             <Image
               src={img2}
               alt="laptop-pic"
-              className="sm:w-95 max-sm:w-40"
+              className="max-sm:w-80"
             />
           ) : (
             <Image
               src={img3}
               alt="laptop-pix"
-              className="sm:w-102 max-sm:w-40"
+              className="max-sm:w-80"
             />
           )}
         </div>
         <p className="m-2 text-zinc-900">starting At</p>
         <h3 className="m-2 text-zinc-900">$199.01</h3>
-        {/* <p className="m-2 mt-6 text-blue-500 ">{res[index].books[0]} </p> */}
+
         <button
           onClick={shop}
-          className="cursor-pointer bg-zinc-900  w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-25 sm:w-30 max-sm:w-20 max-sm:left-5 max-lg:left-10 "
+          className="cursor-pointer sm:w-30 bg-zinc-900 max-md:w-30 w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-25 max-sm:w-50 max-sm:left-5 max-lg:left-10 "
         >
           Shop
         </button>

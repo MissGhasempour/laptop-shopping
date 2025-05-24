@@ -29,7 +29,7 @@ export default function ProductDetail({
 
   const addToCart = () => {};
   return (
-    <div className="bg-zinc-100 mt-20 py-7">
+    <div className="bg-zinc-100 py-7 max-md:w-187">
       <div className="text-stone-900">
         <a href="/" className="inline-block my-4 mx-2 text-blue-700">
           Home
@@ -39,7 +39,7 @@ export default function ProductDetail({
       </div>
       <div></div>
 
-      <div className="flex max-sm:inline px-62 py-10 max-xl:inline">
+      <div className="flex px-62 py-10 max-lg:px-0  max-md:px-0 max-md:flex">
         <Image
           src={
             url[35] === "0"
@@ -65,10 +65,10 @@ export default function ProductDetail({
           alt="laptop"
           width={400}
           height={50}
-          className="m-2"
+          className="m-2 rounded-xl shadow-xl shadow-pink-500 max-md:w-80 max-lg:w-80"
         ></Image>
         <div className="mt-5">
-          <div className="text-center max-xl:text-left">
+          <div className="text-center relative max-xl:text-left  max-sm:text-left max-sm:mt-10 max-lg:left-20">
             {url[35] === "0" ? (
               <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
             ) : url[35] === "1" ? (

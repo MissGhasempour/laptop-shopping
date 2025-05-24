@@ -60,11 +60,11 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <h1 className="ml-170 text-2xl pt-4">Login</h1>
+      <h1 className="ml-170 text-2xl pt-4 max-sm:ml-10 text-purple-700 max-md:ml-45 max-lg:ml-70 max-2xl:text-zinc-100">Login</h1>
       <form
         action="#"
         onSubmit={(e) => submit(e)}
-        className="border-1 border-zinc-100 rounded-xl w-100 fill-white shadow-xl p-10 m-8 ml-130 max-xl:ml-90 overflow-hidden 2xl:ml-10"
+        className="bg-zinc-100 max-sm:ml-5 max-sm:w-92 max-md:ml-45 max-lg:ml-70 border-1 border-zinc-100 rounded-xl w-100 fill-white shadow-xl p-10 m-8 ml-130 max-xl:ml-90 overflow-hidden 2xl:ml-10"
       >
         <label htmlFor="username">Username </label>
         <br />

@@ -12,22 +12,22 @@ export default function SubMenu() {
             padding: "10px",
             color: "black",
           }}
-          className="sm:text-sm sm:ml-2 lg:text-2xl max-sm:text-sm max-sm:w-102"
+          className="sm:text-sm max-md:w-190 lg:text-2xl max-sm:text-sm "
         >
           <li className="max-sm:p-1 max-sm:mx-2 border-b-4 border-red-600 pb-1">
             <Link href={"/products"}>Laptops </Link>{" "}
           </li>
           <li className="max-sm:p-1 ">
-            <Link href={"#"}> Desktops</Link>{" "}
+            <Link href={"/desktop"}> Desktops</Link>{" "}
           </li>
           <li className="max-sm:p-1 max-sm:mx-2">
-            <Link href={"#"}>Workstations </Link>{" "}
+            <Link href={"/workstation"}>Workstations </Link>{" "}
           </li>
           <li className="max-sm:p-1 ">
-            <Link href={"#"}> Accessories</Link>{" "}
+            <Link href={"/accessories"}> Accessories</Link>{" "}
           </li>
           <li className="max-sm:p-1">
-            <Link href={"#"}> Software</Link>{" "}
+            <Link href={"/software"}> Software</Link>{" "}
           </li>
         </ul>
       </div>

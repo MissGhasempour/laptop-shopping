@@ -5,7 +5,7 @@ export default function ProfileIcon() {
   return (
     <div>
       <Link href={"/profile"} className="relative max-xl:right-60 2xl:left-520">
-        <CgProfile className="relative left-200 top-3 text-5xl text-blue-400  cursor-pointer sm:text-2xl sm:left-100 md:left-120 lg:left-210 lg:text-5xl max-sm:left-60 max-sm:text-xl" />
+        <CgProfile className="relative max-md:left-190 max-lg:left-250 left-200 top-3 text-5xl text-blue-400  cursor-pointer sm:text-2xl  lg:text-5xl max-sm:left-197 max-sm:text-xl  max-2xl:left-220" />
       </Link>
     </div>
   );

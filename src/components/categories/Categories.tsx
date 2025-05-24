@@ -21,7 +21,7 @@ export default function Categories() {
             flexDirection: "row",
             justifyContent: "space-around",
           }}
-          className="text-center"
+          className="text-center max-md:w-150"
         >
           <li>
             <div className={classes.icons}>

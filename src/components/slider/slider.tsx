@@ -63,7 +63,7 @@ export default function Slider() {
   return (
     <div className="relative">
       {
-        <div>
+        <div className="max-md:w-190">
           {showPic1 ? (
             <Image
               src={img_1}
@@ -103,15 +103,15 @@ export default function Slider() {
       <div className="controls relative">
         <FaCaretLeft
           onClick={prevSlide}
-          className="absolute left-120 top-5 max-xl:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-20"
+          className="absolute left-120 top-5 max-lg:left-100 max-xl:left-50 max-md:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-50"
         />
 
         <FaCaretRight
           onClick={nextSlide}
-          className="absolute left-210 top-5 max-xl:left-160 2xl:left-460 bg-stone-100 max-sm:left-70 text-stone-900 rounded p-1 text-3xl mr-20"
+          className="absolute left-210 top-5 max-lg:left-150 max-xl:left-160 max-md:left-120 2xl:left-460 bg-stone-100 max-sm:left-120 text-stone-900 rounded p-1 text-3xl mr-20"
         />
       </div>
-      <div className="relative left-160 w-20 max-sm:left-40 max-xl:left-100 px-3 rounded-xl m-4 2xl:left-400">
+      <div className="relative left-160 w-20 max-sm:left-80 max-md:left-80 max-xl:left-120 px-3 rounded-xl m-4 2xl:left-400">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline text-2xl" />

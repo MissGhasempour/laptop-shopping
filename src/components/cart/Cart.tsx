@@ -42,7 +42,7 @@ export default function CartIcon() {
   //console.log(isProduct);
 
   return (
-    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400">
+    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400 max-sm:bg-linear-to-bl from-violet-500 to-fuchsia-500">
       <div className="m-4">
         <Link href={"/"} className="text-blue-600">
           Home
@@ -86,27 +86,15 @@ export default function CartIcon() {
             alt="laptop"
             width={300}
             height={30}
-            className="m-2 max-lg:w-50"
+            className="m-2 relative max-lg:w-50 rounded-xl max-lg:ml-65 max-md:ml-35 max-sm:ml-20"
           ></Image>
         </div>
-        <div className="mt-10">
-          <div className="m-2 text-stone-900 ml-120 max-sm:ml-36 max-xl:ml-60">
-            {url[30] === "0" ? (
-              <p>cost : 23$ x{productsCount}</p>
-            ) : url[30] === "1" ? (
-              <p>cost : 45$ x{productsCount} </p>
-            ) : url[30] === "2" ? (
-              <p>cost : 10$ x{productsCount} </p>
-            ) : (
-              <p>cost : 23$ x{productsCount}</p>
-            )}
-          </div>
-
+        <div className="mt-5 relative max-sm:right-10 max-lg:left-30 max-md:left-1">
           {numbers.map((number) => {
             if (url[30] === number.toString()) {
               return (
                 <div
-                  className="flex max-sm:ml-25 ml-140 max-xl:ml-50"
+                  className="flex max-sm:ml-25 ml-140 max-xl:ml-50 mb-10 mt-8 max-md:ml-62"
                   key={number}
                 >
                   <button
@@ -131,13 +119,26 @@ export default function CartIcon() {
               );
             }
           })}
-          {!isProduct ? (
+
+           {!isProduct ? (
             <h1 className="text-blue-800 ml-120 max-xl:ml-35">
               You'r cart is empty please choose the products!
             </h1>
           ) : null}
 
-          <div className="m-2 text-green-600 ml-120 max-xl:ml-60 ">
+          <div className="m-2 text-stone-900 ml-120 max-sm:ml-36 max-xl:ml-60 max-lg:ml-70">
+            {url[30] === "0" ? (
+              <p>cost : 23$ x{productsCount}</p>
+            ) : url[30] === "1" ? (
+              <p>cost : 45$ x{productsCount} </p>
+            ) : url[30] === "2" ? (
+              <p>cost : 10$ x{productsCount} </p>
+            ) : (
+              <p>cost : 23$ x{productsCount}</p>
+            )}
+          </div>
+         
+          <div className="m-2 text-green-600 ml-120 max-xl:ml-60 max-sm:ml-36 max-sm:text-stone-900 max-md:text-stone-900 max-lg:text-stone-900 max-lg:ml-70">
             {url[30] === "0" ? (
               <h2>payment : {23 * productsCount} $ </h2>
             ) : url[30] === "1" ? (

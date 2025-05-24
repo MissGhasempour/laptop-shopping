@@ -54,7 +54,7 @@ export default function ProductCard({
                 : img_9
             }
             alt="laptop"
-            className="max-lg:w-40 w-50 relative left-5 top-5 max-sm:w-30"
+            className="max-lg:w-40 w-50 relative rounded left-5 top-5 max-sm:w-30 h-30"
           ></Image>
         </div>
 
@@ -100,7 +100,7 @@ export default function ProductCard({
                 : img_9
             }
             alt="laptop"
-            className="max-lg:w-40 w-50 relative left-5 top-5 max-sm:w-30"
+            className="max-lg:w-40 w-50 h-30 rounded relative left-5 top-5 max-sm:w-30"
           ></Image>
         </div>
 
