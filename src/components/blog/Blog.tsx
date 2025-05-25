@@ -3,13 +3,13 @@ import img from "@/images/we-legion-7-3-hp-hero-4.jpg";
 export default function Blog() {
   return (
     <div>
-      <div className="max-md:w-187">
+      <div className="max-md:w-187 2xl:w-785">
         <Image
           src={img}
           alt="laptop-pic"
           width={2500}
           height={1000}
-          className="mt-50 max-sm:w-166 sm:mt-30"
+          className="mt-50 max-sm:w-166 sm:mt-30 2xl:w-845"
         />
       </div>
 

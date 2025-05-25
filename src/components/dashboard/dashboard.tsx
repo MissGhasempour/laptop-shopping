@@ -23,14 +23,14 @@ export default function Dashboard({
           <Link href={"/filter-products"}>Filter</Link>
         </div>
       </div>
-      <div className="m-4 flex max-sm:block ">
-        <div className="w-70 h-110 max-lg:h-105 max-sm:h-140 rounded  max-sm:mr-4 max-lg:w-60 max-md:w-60">
+      <div className="m-4 flex max-sm:block max-xl:ml-10">
+        <div className="w-70 h-110 max-lg:h-105 max-sm:h-140 rounded  max-sm:mr-4 max-lg:w-60 max-md:w-60 max-2xl:w-50 max-2xl:mr-40">
           <BestProduct res={res || []} index={0} />
         </div>
-        <div className="w-70 h-110 max-lg:h-105 max-lg:w-60 max-sm:h-85">
+        <div className="w-70 h-110 max-lg:h-105 max-lg:w-60 max-sm:h-85 max-2xl:w-50 max-2xl:mr-40">
           <BestProduct res={res || []} index={1} />
         </div>
-        <div className=" h-110 max-lg:h-105 max-md:hidden rounded">
+        <div className=" h-110 max-lg:h-105 max-md:hidden rounded max-2xl:w-50">
           <BestProduct res={res || []} index={2} />
         </div>
       </div>

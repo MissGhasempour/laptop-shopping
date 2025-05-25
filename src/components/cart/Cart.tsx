@@ -42,7 +42,7 @@ export default function CartIcon() {
   //console.log(isProduct);
 
   return (
-    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400 max-sm:bg-linear-to-bl from-violet-500 to-fuchsia-500">
+    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400 max-sm:bg-linear-to-bl from-violet-500 to-fuchsia-500 ">
       <div className="m-4">
         <Link href={"/"} className="text-blue-600">
           Home
@@ -59,8 +59,8 @@ export default function CartIcon() {
         <Link href={`/cart-id/${url[30]}`}>Cart</Link>
       </div>
 
-      <div className="my-6">
-        <div className=" m-4 ml-120 max-xl:ml-20">
+      <div className="my-6 max-2xl:ml-30 max-xl:ml-10">
+        <div className=" m-4 ml-120 max-xl:ml-110">
           <Image
             src={
               url[30] === "0"
@@ -89,7 +89,7 @@ export default function CartIcon() {
             className="m-2 relative max-lg:w-50 rounded-xl max-lg:ml-65 max-md:ml-35 max-sm:ml-20"
           ></Image>
         </div>
-        <div className="mt-5 relative max-sm:right-10 max-lg:left-30 max-md:left-1">
+        <div className="mt-5 relative max-sm:right-10 max-lg:left-30 max-md:left-1 max-xl:ml-75">
           {numbers.map((number) => {
             if (url[30] === number.toString()) {
               return (
@@ -138,7 +138,7 @@ export default function CartIcon() {
             )}
           </div>
          
-          <div className="m-2 text-green-600 ml-120 max-xl:ml-60 max-sm:ml-36 max-sm:text-stone-900 max-md:text-stone-900 max-lg:text-stone-900 max-lg:ml-70">
+          <div className="m-2 text-green-800 ml-120 max-xl:ml-60 max-sm:ml-36 max-sm:text-stone-900 max-md:text-stone-900 max-lg:text-stone-900 max-lg:ml-70">
             {url[30] === "0" ? (
               <h2>payment : {23 * productsCount} $ </h2>
             ) : url[30] === "1" ? (

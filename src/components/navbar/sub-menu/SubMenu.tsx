@@ -12,7 +12,7 @@ export default function SubMenu() {
             padding: "10px",
             color: "black",
           }}
-          className="sm:text-sm max-md:w-190 lg:text-2xl max-sm:text-sm "
+          className="sm:text-sm max-md:w-190 lg:text-2xl max-sm:text-sm 2xl:w-785 max-xl:w-319 2xl:text-6xl"
         >
           <li className="max-sm:p-1 max-sm:mx-2 border-b-4 border-red-600 pb-1">
             <Link href={"/products"}>Laptops </Link>{" "}

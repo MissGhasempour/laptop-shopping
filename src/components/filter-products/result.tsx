@@ -40,7 +40,7 @@ export default function Result({
         />
         <Link
           href={`/product-info/${id}`}
-          className="max-sm:ml-15 max-sm:w-20 max-sm:p-0 max-md:ml-20 text-purple-700 max-md:w-25  text-center hover:text-zinc-100 hover:bg-blue-800 hover:border-blue-800 p-2 block border-2 w-70 my-8 rounded-md ml-10 max-lg:ml-30 max-lg:w-30"
+          className="max-sm:ml-15 max-sm:w-20 max-sm:p-0 max-md:ml-20 text-purple-700 max-md:w-25  text-center hover:text-zinc-100 hover:bg-purple-700 hover:border-purple-700 p-2 block border-2 w-70 my-8 rounded-md ml-10 max-lg:ml-30 max-lg:w-30"
         >
           details
         </Link>

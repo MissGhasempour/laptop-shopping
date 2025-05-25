@@ -61,40 +61,40 @@ export default function Slider() {
   };
 
   return (
-    <div className="relative">
+    <div className="">
       {
-        <div className="max-md:w-190">
+        <div className="max-md:w-190 2xl:w-784">
           {showPic1 ? (
             <Image
               src={img_1}
               alt="laptop-img"
-              width={1400}
+              width={3136}
               height={100}
-              className="2xl:w-800"
+              className=""
             />
           ) : showPic2 ? (
             <Image
               src={img_2}
               alt="laptop-img"
-              width={1400}
+              width={2200}
               height={100}
-              className="2xl:w-800"
+              className=""
             />
           ) : showPic3 ? (
             <Image
               src={img_3}
               alt="laptop-img"
-              width={1400}
+              width={2000}
               height={100}
-              className="2xl:w-800"
+              className=""
             />
           ) : (
             <Image
               src={img_1}
               alt="laptop-img"
-              width={1400}
+              width={2000}
               height={100}
-              className="2xl:w-800"
+              className=""
             />
           )}
         </div>
@@ -103,20 +103,20 @@ export default function Slider() {
       <div className="controls relative">
         <FaCaretLeft
           onClick={prevSlide}
-          className="absolute left-120 top-5 max-lg:left-100 max-xl:left-50 max-md:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-50"
+          className="absolute left-120 top-5 max-lg:left-100  max-md:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-50 max-xl:left-130 2xl:text-6xl max-2xl:left-170"
         />
 
         <FaCaretRight
           onClick={nextSlide}
-          className="absolute left-210 top-5 max-lg:left-150 max-xl:left-160 max-md:left-120 2xl:left-460 bg-stone-100 max-sm:left-120 text-stone-900 rounded p-1 text-3xl mr-20"
+          className="absolute left-210 top-5 max-lg:left-150 max-xl:left-180 max-md:left-120 2xl:left-460 bg-stone-100 max-sm:left-120 text-stone-900 rounded p-1 text-3xl mr-20 2xl:text-6xl max-2xl:left-220"
         />
       </div>
-      <div className="relative left-160 w-20 max-sm:left-80 max-md:left-80 max-xl:left-120 px-3 rounded-xl m-4 2xl:left-400">
+      <div className="relative left-160 w-20 max-sm:left-80 max-md:left-80 max-xl:left-150 px-3 rounded-xl m-4 my-8 2xl:left-400 2xl:w-70 2xl:text-2xl max-2xl:left-190">
         {showPic1 ? (
           <>
-            <RxDotFilled className="inline text-2xl" />
-            <GoDot className="inline" />
-            <GoDot className="inline" />
+            <RxDotFilled className="inline-block text-2xl" />
+            <GoDot className="inline-block" />
+            <GoDot className="inline-block" />
           </>
         ) : showPic2 ? (
           <>

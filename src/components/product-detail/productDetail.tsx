@@ -39,7 +39,7 @@ export default function ProductDetail({
       </div>
       <div></div>
 
-      <div className="flex px-62 py-10 max-lg:px-0  max-md:px-0 max-md:flex">
+      <div className="flex px-62 py-10 max-lg:px-0  max-md:px-0 max-md:flex max-2xl:ml-40">
         <Image
           src={
             url[35] === "0"
@@ -68,7 +68,7 @@ export default function ProductDetail({
           className="m-2 rounded-xl shadow-xl shadow-pink-500 max-md:w-80 max-lg:w-80"
         ></Image>
         <div className="mt-5">
-          <div className="text-center relative max-xl:text-left  max-sm:text-left max-sm:mt-10 max-lg:left-20">
+          <div className="text-center relative max-xl:text-center  max-sm:text-left max-sm:mt-10 max-lg:left-20 ">
             {url[35] === "0" ? (
               <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
             ) : url[35] === "1" ? (
