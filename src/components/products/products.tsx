@@ -22,7 +22,7 @@ export default function Products({
   }, []);
 
   return (
-    <div className="flex m-3 mt-20 mobile:w-140">
+    <div className="flex m-3 mt-20 overflow-hidden mobile:block max-mobile:block tablet:flex">
       {newRes? newRes.map((product:{aliases:string, books:string[]}, index:number) => {
         return (
           <ProductCard

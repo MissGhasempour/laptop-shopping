@@ -9,7 +9,7 @@ export default function Categories() {
     <div>
       <h1
         style={{ fontWeight: "bold" }}
-        className="text-4xl mobile:text-2xl m-6 mb-20 sm:text-xl lg:text-3xl max-sm:text-xl max-sm:mb-10 mt-40 2xl:text-7xl"
+        className="text-4xl max-mobile:text-2xl mobile:text-2xl m-6 mb-20 sm:text-xl lg:text-3xl max-sm:text-xl max-sm:mb-10 mt-40 2xl:text-7xl"
       >
         Explore Products at Lenovo
       </h1>

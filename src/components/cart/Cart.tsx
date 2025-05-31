@@ -94,7 +94,7 @@ export default function CartIcon() {
             if (url[30] === number.toString()) {
               return (
                 <div
-                  className="flex mobile:ml-15 max-sm:ml-25 max-xl:ml-50 mb-10 mt-8 max-md:ml-62"
+                  className="flex max-mobile:ml-20 mobile:ml-15 max-sm:ml-25 max-xl:ml-50 mb-10 mt-8 max-md:ml-62"
                   key={number}
                 >
                   <button

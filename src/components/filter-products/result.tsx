@@ -19,7 +19,7 @@ export default function Result({
 }) {
   return (
     <>
-      <div className="m-4 bg-zinc-100 ml-10 py-2  rounded-xl max-md:bg-purple-200 max-xl:ml-10 max-sm:ml-0 max-md:w-60 max-sm:h-60 2xl:w-800 h-100 max-sm:mt-10 max-sm:w-50 max-sm:bg-zinc-100 max-md:h-60">
+      <div className="m-4 max-mobile:h-50 bg-zinc-100 ml-10 py-2  rounded-xl max-md:bg-purple-200 max-xl:ml-10 max-sm:ml-0 max-md:w-60 max-sm:h-60 2xl:w-800 h-100 max-sm:mt-10 max-sm:w-50 max-sm:bg-zinc-100 max-md:h-60">
         <Image
           src={
             brandname === "Walder"
@@ -35,12 +35,12 @@ export default function Result({
               : img2
           }
           alt="laptop-pic"
-          className="m-4 max-lg:w-70 ml-5 max-lg:ml-10 rounded-xl max-sm:ml-5 max-sm:w-40 max-md:ml-5 max-md:w-50"
+          className="max-mobile:w-30  m-4 max-lg:w-70 ml-5 max-lg:ml-10 rounded-xl max-sm:ml-5 max-sm:w-40 max-md:ml-5 max-md:w-50"
           width={240}
         />
         <Link
           href={`/product-info/${id}`}
-          className="max-sm:ml-15 max-sm:w-20 max-sm:p-0 max-md:ml-20 text-purple-700 max-md:w-25  text-center hover:text-zinc-100 hover:bg-purple-700 hover:border-purple-700 p-2 block border-2  my-8 rounded-md mx-10  max-lg:ml-30 max-lg:w-30"
+          className="max-mobile:p-0 max-sm:ml-15 max-sm:w-20 max-sm:p-0 max-md:ml-20 text-purple-700 max-md:w-25  text-center hover:text-zinc-100 hover:bg-purple-700 hover:border-purple-700 p-2 block border-2  my-8 rounded-md mx-10  max-lg:ml-30 max-lg:w-30"
         >
           details
         </Link>

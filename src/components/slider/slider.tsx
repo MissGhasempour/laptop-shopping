@@ -103,15 +103,15 @@ export default function Slider() {
       <div className="controls relative">
         <FaCaretLeft
           onClick={prevSlide}
-          className="absolute mobile:left-50 ipad:left-80 tablet:left-110 laptop:left-140 top-5 max-lg:left-100 md:left-130 max-md:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-60 max-xl:left-130 2xl:text-6xl max-2xl:left-130 sm:left-60"
+          className="absolute max-mobile:left-20 mobile:left-50 ipad:left-80 tablet:left-110 laptop:left-140 top-5 max-lg:left-100 md:left-130 max-md:left-50 2xl:left-350 bg-stone-100 text-stone-900 rounded p-1 ml-12 text-3xl max-sm:left-60 max-xl:left-130 2xl:text-6xl max-2xl:left-130 sm:left-60"
         />
 
         <FaCaretRight
           onClick={nextSlide}
-          className="absolute mobile:left-100 ipad:left-130 tablet:left-160 laptop:left-190 top-5 max-lg:left-150 md:left-180 max-xl:left-180 max-md:left-120 2xl:left-460 bg-stone-100 max-sm:left-110 text-stone-900 rounded p-1 text-3xl mr-20 2xl:text-6xl max-2xl:left-180 sm:left-110"
+          className="absolute max-mobile:left-70 mobile:left-100 ipad:left-130 tablet:left-160 laptop:left-190 top-5 max-lg:left-150 md:left-180 max-xl:left-180 max-md:left-120 2xl:left-460 bg-stone-100 max-sm:left-110 text-stone-900 rounded p-1 text-3xl mr-20 2xl:text-6xl max-2xl:left-180 sm:left-110"
         />
       </div>
-      <div className="relative mobile:left-70 ipad:left-100 tablet:left-130 laptop:left-160 w-20 max-sm:left-80 max-md:left-80 max-xl:left-150 px-3 rounded-xl m-4 my-6 2xl:left-400 2xl:w-70 2xl:text-2xl max-2xl:left-150">
+      <div className="relative max-mobile:left-40 mobile:left-70 ipad:left-100 tablet:left-130 laptop:left-160 w-20 max-sm:left-80 max-md:left-80 max-xl:left-150 px-3 rounded-xl m-4 my-6 2xl:left-400 2xl:w-70 2xl:text-2xl max-2xl:left-150">
         {showPic1 ? (
           <>
             <RxDotFilled className="inline-block text-2xl" />

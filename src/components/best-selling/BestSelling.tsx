@@ -8,7 +8,7 @@ export default async function BestSelling() {
       <h2 className="text-3xl m-5 mt-30 mb-12  p-3  max-sm:text-xl 2xl:text-7xl">
         Best selling pc
       </h2>
-      <div className="flex mobile:block ipad:flex ipad:w-170 2xl:justify-around">
+      <div className="flex mobile:block  max-mobile:block max-mobile:w-70 ipad:flex ipad:w-170 laptop:w-200 2xl:justify-around">
         <BestProduct res={products || []} index={0} />
         <BestProduct res={products || []} index={1} />
         <BestProduct res={products || []} index={2} />

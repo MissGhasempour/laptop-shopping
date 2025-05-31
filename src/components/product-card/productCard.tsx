@@ -74,7 +74,7 @@ export default function ProductCard({
         <br />
       </div>
 
-      <div className="max-lg:w-50 my-7 w-60 bg-zinc-100 rounded-2xl max-sm:w-40">
+      <div className="max-mobile:hidden mobile:hidden tablet:block  max-lg:w-50 my-7 w-60 bg-zinc-100 rounded-2xl max-sm:w-40">
         <div>
           <Image
             src={
