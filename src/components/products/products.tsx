@@ -1,25 +1,40 @@
 "use client";
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import ProductCard from "../product-card/productCard";
 
+type Res = {
+  aliases:string;
+  bookes: string[];
+  newRes:string[];
+  setNewRes:Dispatch<SetStateAction<string[]>>
+}
 export default function Products({
   res,
 }: {
-  res: [{ culture: string; aliases: string ; books : string}];
+  res: [{ culture: string; aliases: string; books: string }];
 }) {
-  console.log(res[0])
+  //console.log(res[0]);
+
+  const [newRes, setNewRes]:Res = useState();
+  useEffect(() => {
+    const filterProductCount = res.splice(1,4);
+    setNewRes(filterProductCount);
+  }, []);
+
   return (
-    <div className="flex m-3 mt-20">
-      {res.map((product, index) => (
-        <ProductCard
-          id={index}
-          isPurple={!index}
-          culture={product.aliases}
-          books={product.books[0]}
-          imageSrc=""
-          key={product.aliases}
-        />
-      ))}
+    <div className="flex m-3 mt-20 mobile:w-140">
+      {newRes? newRes.map((product:{aliases:string, books:string[]}, index:number) => {
+        return (
+          <ProductCard
+            id={index}
+            isPurple={!index}
+            culture={product.aliases}
+            books={product.books[0]}
+            imageSrc=""
+            key={product.aliases}
+          />
+        );
+      }) : null}
     </div>
   );
 }

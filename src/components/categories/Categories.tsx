@@ -9,7 +9,7 @@ export default function Categories() {
     <div>
       <h1
         style={{ fontWeight: "bold" }}
-        className="m-6 mb-20 sm:text-xl lg:text-3xl max-sm:text-xl max-sm:mb-10 mt-40 2xl:text-7xl"
+        className="text-4xl mobile:text-2xl m-6 mb-20 sm:text-xl lg:text-3xl max-sm:text-xl max-sm:mb-10 mt-40 2xl:text-7xl"
       >
         Explore Products at Lenovo
       </h1>
@@ -21,7 +21,7 @@ export default function Categories() {
             flexDirection: "row",
             justifyContent: "space-around",
           }}
-          className="text-center max-md:w-150 max-xl:w-230 2xl:w-550 2xl:text-5xl max-xl:text-xl"
+          className="text-center max-md:w-150 max-xl:w-230 2xl:w-550 2xl:text-5xl max-xl:text-xl max-2xl:w-200"
         >
           <li>
             <div className="" id={classes.icons}>

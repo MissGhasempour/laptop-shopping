@@ -6,7 +6,7 @@ import { FaSquareYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-200 max-sm:w-190 text-stone-900 max-lg:w-255 max-xl:w-317 max-md:w-190 2xl:w-785">
+    <footer className="overflow-hidden bg-stone-200 max-sm:w-190 text-stone-900 max-lg:w-255 max-xl:w-317 max-md:w-190 2xl:w-785 max-2xl:w-331 ">
       <div className="flex mx-20 text-3xl text-blue-900  p-12  max-sm:mx-0">
         <div className="m-4">
           <FaInstagramSquare />
@@ -24,7 +24,7 @@ export default function Footer() {
           <FaSquareYoutube />
         </div>
       </div>
-      <div className="flex sm:text-sm max-sm:text-sm">
+      <div className="flex text-sm max-sm:text-sm">
         <div className="m-4">
           <h1 className="my-4">About Lenovo</h1>
           <p>
@@ -68,7 +68,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="m-4 ml-50 sm:ml-3 max-sm:ml-0">
+      <p className="m-4 ml-50 mobile:ml-5 sm:ml-3 max-sm:ml-0">
         Privacy | Cookie Consent Tool | Terms of Use |Site Map | External
         Submission Policy | Anti-Slavery and Human Trafficking Statement
       </p>

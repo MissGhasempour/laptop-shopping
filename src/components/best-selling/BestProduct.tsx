@@ -23,9 +23,9 @@ export default function BestProduct({
     router.push(`/cart-id/${index}`);
   };
   return (
-    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-60  w-80 transition duration-300 ease-in-out max-sm:w-60 max-sm:ml-10 2xl:w-100">
+    <div className="border rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-60  mobile:w-70 transition duration-300 ease-in-out max-sm:w-50 max-sm:ml-10 2xl:w-100">
       <div>
-        <div className="relative left-80 top-6 sm:left-27 max-sm:left-20 ">
+        <div className="relative left-30 top-6 sm:left-27 max-sm:left-20 ">
           <FaRegHeart className="m-2 text-red-600" />
         </div>
 
@@ -37,7 +37,7 @@ export default function BestProduct({
           ) : (
             <h2 className="text-rose-400">{res[index].aliases}</h2>
           )}
-          <div className="relative left-52 sm:left-0 max-sm:left-0 text-yellow-300">
+          <div className="relative left-2 sm:left-0 max-sm:left-0 text-yellow-300">
             <FaStar className="inline" />
             <FaStar className="inline" /> <FaStar className="inline" />
             <FaStar className="inline" />
@@ -71,7 +71,7 @@ export default function BestProduct({
 
         <button
           onClick={shop}
-          className="cursor-pointer sm:w-30 bg-zinc-900 max-md:w-30 w-100 rounded-xl text-zinc-100 py-2 my-10 mt-20 relative left-25 max-sm:w-50 max-sm:left-5 max-lg:left-10 max-xl:left-15 2xl:ml-11"
+          className="cursor-pointer mobile:ml-20 ipad:ml-12 sm:w-30 bg-zinc-900 max-md:w-30  rounded-xl text-zinc-100 py-2 my-10 mt-20 relative ml-10 px-10 max-sm:w-40 max-sm:left-5 max-lg:left-10 max-xl:left-15 2xl:ml-11"
         >
           Shop
         </button>

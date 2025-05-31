@@ -26,7 +26,6 @@ export default function ProductCard({
   isPurple?: boolean;
 }) {
   
-  console.log()
   return (
     <div className="my-7 mx-4">
       <div className="bg-zinc-100 rounded-2xl w-60 max-sm:w-40 max-lg:w-50">
