@@ -55,11 +55,11 @@ export default function Footer() {
             Affiiliate Program Employee Purchase Program Glossary
           </p>
         </div>
-        <div className="m-4 sm:mx-4 max-sm:hidden">
+        <div className="m-4 sm:mx-4 max-sm:hidden max-mobile:hidden">
           <h1 className="my-4">CUSTOMER SUPPORT</h1>
           <p>Contact Us Support Order Status Product FAQs Shopping FAQs</p>
         </div>
-        <div className="m-4 sm:mx-0 max-sm:hidden">
+        <div className="m-4 sm:mx-0 max-sm:hidden max-mobile:hidden">
           <h1 className="my-4">PORTFOLIO</h1>
           <p>
             ThinkPad T Series ThinkPad X Series ThinkPad IdeaPad Yoga M Series
@@ -68,7 +68,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <p className="m-4 ml-50 mobile:ml-5 sm:ml-3 max-sm:ml-0">
+      <p className="m-4 ml-50 max-mobile:ml-5 mobile:ml-5 sm:ml-3 max-sm:ml-0">
         Privacy | Cookie Consent Tool | Terms of Use |Site Map | External
         Submission Policy | Anti-Slavery and Human Trafficking Statement
       </p>
