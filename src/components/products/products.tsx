@@ -15,6 +15,7 @@ export default function Products({
 }) {
   //console.log(res[0]);
 
+  // @ts-expect-error
   const [newRes, setNewRes]:Res = useState();
   useEffect(() => {
     const filterProductCount = res.splice(1,4);
