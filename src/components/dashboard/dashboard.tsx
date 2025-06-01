@@ -23,7 +23,7 @@ export default function Dashboard({
           <Link href={"/filter-products"}>Filter</Link>
         </div>
       </div>
-      <div className="m-4 flex max-mobile:grid max-mobile:gap-60 max-mobile:w-70 mobile:grid mobile:gap-50 tablet:gap-6 tablet:flex max-xl:ml-10">
+      <div className="m-4 flex max-mobile:grid max-mobile:gap-70 max-mobile:w-70 mobile:grid mobile:gap-50 tablet:gap-6 tablet:flex max-xl:ml-10">
         <div className="max-lg:h-105 max-sm:h-140 rounded  max-sm:mr-4 max-lg:w-60 max-md:w-60 max-2xl:w-50 max-2xl:mr-40">
           <BestProduct res={res || []} index={0} />
         </div>

@@ -2,13 +2,6 @@
   background-image: url("../images/WooCommerce-Product-Filter-–-Best-WordPress-Plugin-for-Product-Filtering-1-1.png");
 }
 
-@media (max-width: 640px) {
-  #bgImage {
-    background-image: url('../images/analytics-sales-funnel-process-big-data-filter-data-tunnel-analysis-vector-concept-66879729.webp');
-    background-size:100% 110%;
-    background-repeat: no-repeat;
-  }
-}
 
 @media (max-width:768px) {
   #bgImage {

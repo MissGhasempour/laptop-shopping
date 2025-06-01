@@ -7,7 +7,7 @@ import { FaSquareYoutube } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="overflow-hidden max-mobile:text-sm bg-stone-200 max-sm:w-190 text-stone-900 max-lg:w-255 max-xl:w-317 max-md:w-190 2xl:w-785 max-2xl:w-331 ">
-      <div className="flex mx-20 text-3xl text-blue-900  p-12  max-sm:mx-0">
+      <div className="flex mx-20 max-mobile:mx-2 text-3xl text-blue-900  p-12  max-sm:mx-0">
         <div className="m-4">
           <FaInstagramSquare />
         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="m-4">
-          <h1 className="my-4">PRODUCTS & SERVICES</h1>
+          <h1 className="my-4 max-mobile:hidden">PRODUCTS & SERVICES</h1>
           <p>
             Laptops & Ultrabooks Smarter AI for You Lenovo Gaming Products
             Tablets & Home Assistant Desktops Workstations Data Center Solutions
@@ -47,8 +47,8 @@ export default function Footer() {
             Replacement Parts Warranty Upgrade
           </p>
         </div>
-        <div className="m-4 max-sm:hidden">
-          <h1 className="my-4">RESOURCES</h1>
+        <div className="m-4 max-sm:hidden max-mobile:hidden">
+          <h1 className="my-4 max-mobile:hidden">RESOURCES</h1>
           <p>
             Lenovo EDU Community Legion Community Email Signup My Lenovo Rewards
             Product Registration Forums Blogs Where to buy Product Compliance

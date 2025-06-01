@@ -28,7 +28,7 @@ export default function ProductCard({
   
   return (
     <div className="my-7 mx-4">
-      <div className="bg-zinc-100 rounded-2xl w-60 max-sm:w-40 max-lg:w-50">
+      <div className="bg-zinc-100 rounded-2xl w-60 max-sm:w-40 max-lg:w-50 max-mobile:m-auto">
         <div>
           <Image
             src={
