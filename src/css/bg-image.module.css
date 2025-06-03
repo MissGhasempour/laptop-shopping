@@ -1,5 +1,5 @@
 #bgImage {
-    background-image: url('../images/how_to_customize_coming_soon_page_shopify.webp');
+    background-image: url('../images/Diverse-Group-of-People-Visit-an-About-Us-Page.jpg');
 }
 
 #bgAccessories {
@@ -12,4 +12,11 @@
 
 #bgSoftware {
     background-image: url('../images/enchanted-forest-coming-soon-sign-vibrant-fantasy-woodland-scene-whimsical-310337289.webp');
+}
+
+@media (min-width:640px) {
+    #bgImage{
+        background-size: cover;
+        background-position: center;
+    }
 }
