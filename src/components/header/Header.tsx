@@ -1,9 +1,7 @@
 import CartIcon from "../cart-icon/CartIcon";
 import Logo from "../logo/Logo";
-import Navbar from "../navbar/navbar";
+import SubMenu from "../navbar/sub-menu/SubMenu";
 import ProfileIcon from "../profile-icon/ProfileIcon";
-import { MdOutlineNewLabel } from "react-icons/md";
-import SearchBar from "../search-bar/searchBar";
 import { TbFilterSearch } from "react-icons/tb";
 
 export default async function Header() {
@@ -25,7 +23,7 @@ export default async function Header() {
         <CartIcon />
       </div>
 
-      <Navbar />
+      <SubMenu />
     </header>
   );
 }

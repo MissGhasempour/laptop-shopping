@@ -2,11 +2,11 @@ import style from "@/css/bg-image.module.css";
 import Image from "next/image";
 import img from "@/images/about-us-page-examples.png";
 
-export default function Desktop() {
+export default function About() {
   return (
     <div className="bg-zinc-50 text-stone-950">
       <Image src={img} alt="about-us" className="h-120" />
-      <h1 className="font-sans font-bold text-stone-950 p-20 text-5xl absolute top-45">
+      <h1 className="font-sans absolute  font-bold  text-stone-950 p-20 text-5xl top-45 mobile:top-160">
         About Us
       </h1>
       <div className="grid grid-cols-3 mobile:grid-cols-1 mobile:gap-15 tablet:grid-cols-3  bg-no-repeat p-5 ">

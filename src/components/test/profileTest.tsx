@@ -2,8 +2,6 @@
 import { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { setCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import img from "@/images/blog-famous-logo-brandsX_1200x1200-e1690187170634.webp";
 
 export default function ProfileTest() {
   const [usernameMessage, setUsernameMessage] = useState("");
@@ -60,7 +58,9 @@ export default function ProfileTest() {
   };
   return (
     <>
-      <h1 className="text-2xl max-mobile:text-purple-700 max-mobile:ml-10 text-zinc-100 font-bold text-3xl mobile:ml-40 ipad:ml-60 tablet:ml-90 laptop:ml-120 tablet:text-4xl laptop:text-4xl pt-4 max-sm:ml-10  laptop:text-purple-700 max-md:ml-45 max-lg:ml-70 max-2xl:text-zinc-100 max-2xl:ml-185 max-xl:ml-150">Login</h1>
+      <h1 className="text-2xl max-mobile:text-purple-700 max-mobile:ml-10 text-zinc-100 font-bold  mobile:ml-40 ipad:ml-60 tablet:ml-90 laptop:ml-120 tablet:text-4xl laptop:text-4xl pt-4 max-sm:ml-10  laptop:text-purple-700 max-md:ml-45 max-lg:ml-70 max-2xl:text-zinc-100 max-2xl:ml-185 max-xl:ml-150">
+        Login
+      </h1>
       <form
         action="#"
         onSubmit={(e) => submit(e)}
