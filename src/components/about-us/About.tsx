@@ -6,10 +6,10 @@ export default function About() {
   return (
     <div className="bg-zinc-50 text-stone-950">
       <Image src={img} alt="about-us" className="h-120" />
-      <h1 className="font-sans absolute  font-bold  text-stone-950 p-20 text-5xl top-45 mobile:top-160">
+      <h1 className="font-sans absolute  font-bold  text-stone-950 p-20 text-5xl tablet:top-45 tablet:left-0 mobile:left-50 mobile:top-20 max-mobile:top-20 max-mobile:left-20 max-mobile:text-4xl">
         About Us
       </h1>
-      <div className="grid grid-cols-3 mobile:grid-cols-1 mobile:gap-15 tablet:grid-cols-3  bg-no-repeat p-5 ">
+      <div className="grid grid-cols-3 max-mobile:grid-cols-1 mobile:grid-cols-1 mobile:gap-15 tablet:grid-cols-3  bg-no-repeat p-5 ">
         {/* <p className="font-Arial w-150  bg-pink-700 rounded-2xl ml-5 p-5 h-50">
         SoftTech aims to empower your business to unleash ecommerce growth by
         outsmarting risk. Ecommerce fraud teams play a crucial role in enabling

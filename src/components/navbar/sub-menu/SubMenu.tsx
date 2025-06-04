@@ -12,15 +12,18 @@ export default function SubMenu() {
             padding: "10px",
             color: "black",
           }}
-          className="max-mobile:text-sm sm:text-sm max-md:w-190 lg:text-2xl max-sm:text-sm 2xl:w-785  max-2xl:w-331 2xl:text-6xl md:w-331 md:text-xl  lg:w-252  max-sm:w-116 sm:w-167 max-xl:xl:w-full "
+          className="max-mobile:text-sm h-12 sm:text-sm max-md:w-190 lg:text-2xl max-sm:text-sm 2xl:w-785  max-2xl:w-331 2xl:text-6xl md:w-331 md:text-xl  lg:w-252  max-sm:w-116 sm:w-167 max-xl:xl:w-full "
         >
-          <li className="max-sm:p-1 max-sm:mx-2 border-b-4 border-red-600 pb-1">
-            <Link href={"/products"}>Laptops </Link>{" "}
+          <li className="hover:border-b-4 hover:border-red-600">
+            <Link href={"/"}>Home</Link>{" "}
           </li>
-          <li className="max-sm:p-1 ">
+          <li className="max-sm:mx-2 hover:border-b-4 hover:border-red-600 ">
+            <Link href={"/products"}>Products </Link>{" "}
+          </li>
+          <li className="hover:border-b-4 hover:border-red-600">
             <Link href={"/about"}> About</Link>{" "}
           </li>
-          <li className="max-sm:p-1 max-sm:mx-2">
+          <li className="max-sm:mx-2 hover:border-b-4 hover:border-red-600">
             <Link href={"/contact"}>Contact </Link>{" "}
           </li>
         </ul>

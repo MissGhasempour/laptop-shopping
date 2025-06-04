@@ -42,7 +42,7 @@ export default function CartIcon() {
   //console.log(isProduct);
 
   return (
-    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400 max-sm:bg-linear-to-bl from-violet-500 to-fuchsia-500 ">
+    <div className="bg-zinc-100 p-4 text-stone-900 bg-gradient-to-r from-zinc-200 via-purple-500 to-pink-400  ">
       <div className="m-4">
         <Link href={"/"} className="text-blue-600">
           Home
