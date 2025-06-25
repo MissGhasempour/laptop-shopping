@@ -5,14 +5,14 @@ import React, { useCallback, useEffect, useState } from "react";
 
 export default function FilterProduct() {
   const router = useRouter();
-  let pathname = usePathname();
+  const pathname = usePathname();
 
   const searchParams = useSearchParams();
   const [queryParam, setQueryParam] = useState("");
   const [param, setParam] = useState("");
 
   const filterProducts = useCallback(
-    (value: any) => {
+    (value: string) => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("brandname", value);
       setParam(params.toString());

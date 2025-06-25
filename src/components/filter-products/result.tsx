@@ -9,11 +9,9 @@ import img_5 from "@/images/luis-quintero-aUnkqeCvz80-unsplash.jpg";
 import Link from "next/link";
 
 export default function Result({
-  searchParams,
   brandname,
-  id,
+  id
 }: {
-  searchParams: any;
   brandname: string;
   id: number;
 }) {

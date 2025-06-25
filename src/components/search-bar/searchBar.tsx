@@ -5,14 +5,12 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function SearchBar({
   res,
-  
 }: {
   res: [
     { culture: string; aliases: string },
     { culture: string; aliases: string; name: string },
     { culture: string; aliases: string; books: string[] }
   ];
-  display: any;
 }) {
   const [searchProduct, setSearchProduct] = useState("");
   const [display, setDisplay] = useState(false);
@@ -23,7 +21,7 @@ export default function SearchBar({
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams.toString());
   const filterProducts = useCallback(
-    (value: any) => {
+    (value: string) => {
       params.set("brandname", value);
       setParam(params.toString());
       setQueryParam(params?.toString());

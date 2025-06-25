@@ -11,6 +11,7 @@ import img_9 from "@/images/sreej-pradhan-msKaizMpoRs-unsplash.jpg";
 import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function ProductDetail({
   res,
@@ -31,9 +32,9 @@ export default function ProductDetail({
   return (
     <div className="bg-zinc-100 py-7 max-md:w-187">
       <div className="text-stone-900">
-        <a href="/" className="inline-block my-4 mx-2 text-blue-700">
+        <Link href="/" className="inline-block my-4 mx-2 text-blue-700">
           Home
-        </a>
+        </Link>
         {" >  "}
         <a href={`/product-info/${url[35]}`}> Details</a>
       </div>
@@ -66,8 +67,8 @@ export default function ProductDetail({
           height={50}
           className="m-2 rounded-xl shadow-xl shadow-pink-500 max-md:w-80 max-lg:w-80"
         ></Image>
-        <div className="mt-15 overflow-hidden max-mobile:mt-15 mobile:text-left  text-center">
-          <div className="mobile:ml-35 relative max-xl:text-center  max-sm:text-left max-sm:mt-10 max-lg:left-20 ">
+        <div className="mt-15 overflow-hidden max-mobile:mt-15 mobile:text-left text-center">
+          <div className="relative mobile:ml-17 max-xl:text-center  max-sm:text-left max-sm:mt-10 max-lg:left-20 ">
             {url[35] === "0" ? (
               <h2 className="text-rose-600 my-4 mx-2">{res[0].aliases}</h2>
             ) : url[35] === "1" ? (

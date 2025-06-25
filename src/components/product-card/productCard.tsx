@@ -15,9 +15,7 @@ import Link from "next/link";
 export default function ProductCard({
   id,
   culture,
-  books,
-  imageSrc,
-  isPurple = false,
+  books
 }: {
   id: number;
   culture: string;

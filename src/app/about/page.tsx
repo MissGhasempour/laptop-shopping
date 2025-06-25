@@ -1,5 +1,5 @@
-import Desktop from "@/components/about-us/About";
+import About from "@/components/about-us/About";
 
 export default function Page ( ) {
-    return <Desktop />
+    return <About />
 }

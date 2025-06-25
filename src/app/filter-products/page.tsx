@@ -12,15 +12,15 @@ export default function FilterProductPage() {
     <div className="flex bg-cover h-120 text-stone-900" id={style.bgImage}>
       <FilterProduct />
       {brandname === "Braavosi" ? (
-        <Result searchParams={searchParams} brandname={brandname} id={0} />
+        <Result brandname={brandname} id={0} />
       ) : brandname === "Walder" ? (
-        <Result searchParams={searchParams} brandname={brandname} id={1} />
+        <Result brandname={brandname} id={1} />
       ) : brandname === "Lamprey" ? (
-        <Result searchParams={searchParams} brandname={brandname} id={2} />
+        <Result brandname={brandname} id={2} />
       ) : brandname === "Merling" ? (
-        <Result searchParams={searchParams} brandname={brandname} id={3} />
+        <Result brandname={brandname} id={3} />
       ) : brandname === "Crackbones" ? (
-        <Result searchParams={searchParams} brandname={brandname} id={4} />
+        <Result brandname={brandname} id={4} />
       ) : (
         <div></div>
       )}

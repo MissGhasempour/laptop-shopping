@@ -10,7 +10,7 @@ export default function ProfileTest() {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const handleUsername: ChangeEventHandler<HTMLInputElement> = (e) => {
-    const cookies = setCookie("username", e.currentTarget.value);
+    setCookie("username", e.currentTarget.value);
     if (e.currentTarget.value.length <= 3) {
       setUsernameMessage("username characters must be more than 3 ");
     } else {
@@ -23,7 +23,7 @@ export default function ProfileTest() {
   };
 
   const handleAge = (value: string) => {
-    const cookies = setCookie("age", value);
+    setCookie("age", value);
     if (Number(value) < 18) {
       setAge("Sorry! You do not allow to login");
     } else if (Number(value) > 90) {
@@ -34,7 +34,7 @@ export default function ProfileTest() {
   };
 
   const handleEmail = (email: string) => {
-    const cookies = setCookie("email", email);
+    setCookie("email", email);
     if (
       (email.includes("@") && email.includes(".com")) ||
       email.includes(".ir") ||
@@ -47,8 +47,7 @@ export default function ProfileTest() {
   };
 
   const handlePassword = (password: string) => {
-    const cookies = setCookie("password", password);
-    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    setCookie("password", password);
 
     if (password.length > 5) {
       setPassword("You're password is strong");
@@ -109,7 +108,7 @@ export default function ProfileTest() {
         <input
           type="submit"
           value="submit"
-          className="transition duration-300 ease-in-out relative  my-4 border-2 p-2 w-73 rounded-xl border-blue-700 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 "
+          className="cursor-pointer transition duration-300 ease-in-out relative  my-4 border-2 p-2 w-73 rounded-xl border-blue-700 bg-blue-700 text-zinc-100 text-xl hover:bg-zinc-100 hover:border-red-400 hover:border-2 hover:text-red-500 "
         />
       </form>
     </>

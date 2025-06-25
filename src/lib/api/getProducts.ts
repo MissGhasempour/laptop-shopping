@@ -3,8 +3,7 @@ export default async function getProducts() {
     "https://www.anapioficeandfire.com/api/characters",
     {
       headers: {
-        "Content-Type": "application/json",
-        // Add other necessary headers (e.g., authorization)
+        "Content-Type": "application/json"
       },
       cache: "force-cache",
     }

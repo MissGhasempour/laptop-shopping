@@ -122,7 +122,7 @@ export default function CartIcon() {
 
           {!isProduct ? (
             <h1 className="text-blue-800  max-xl:ml-35">
-              You'r cart is empty please choose the products!
+              Your cart is empty please choose the products!
             </h1>
           ) : null}
 

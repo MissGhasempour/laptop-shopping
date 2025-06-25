@@ -1,5 +1,7 @@
 import Image from "next/image";
 import img from "@/images/we-legion-7-3-hp-hero-4.jpg";
+import Link from "next/link";
+
 export default function Blog() {
   return (
     <div className="mb-20">
@@ -20,12 +22,12 @@ export default function Blog() {
         </p>
       </div>
 
-      <a
+      <Link
         href="/"
         className="block m-4 mt-10 border-1 max-md:mb-20 rounded p-2 w-40 pl-7 max-sm:p-2 max-sm:w-30 hover:bg-stone-100 hover:text-zinc-900"
       >
         Explore Deals
-      </a>
+      </Link>
     </div>
   );
 }
