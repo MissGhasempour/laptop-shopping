@@ -20,10 +20,10 @@ export default function Products({
   useEffect(() => {
     const filterProductCount = res.splice(1,4);
     setNewRes(filterProductCount);
-  }, []);
+  }, [res]);
 
   return (
-    <div className="flex m-3 mt-20 overflow-hidden mobile:block max-mobile:block tablet:flex">
+    <div className="flex m-3 overflow-hidden mobile:block max-mobile:block tablet:flex">
       {newRes? newRes.map((product:{aliases:string, books:string[]}, index:number) => {
         return (
           <ProductCard
