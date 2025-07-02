@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import img1 from "@/images/dell-bXfQLglc81U-unsplash.jpg";
 import img2 from "@/images/taan-huyn-RyGOh7pRzAI-unsplash.jpg";
 import img3 from "@/images/anete-lusina-zwsHjakE_iI-unsplash.jpg";
+import { motion } from "motion/react";
+
 export default function BestProduct({
   res,
   index,
@@ -23,7 +25,11 @@ export default function BestProduct({
     router.push(`/cart-id/${index}`);
   };
   return (
-    <div className="border mobile:ml-5  rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-60 mobile:w-70  transition duration-300 ease-in-out max-sm:w-50 max-sm:ml-10 2xl:w-100">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.8 }}
+      className="border mobile:ml-5  rounded-2xl m-2 bg-stone-100 max-lg:w-50 max-xl:w-60 mobile:w-70  transition duration-300 ease-in-out max-sm:w-50 max-sm:ml-10 2xl:w-100"
+    >
       <div>
         <div className="relative left-30 top-6 sm:left-27 max-sm:left-20 ">
           <FaRegHeart className="m-2 text-red-600" />
@@ -47,23 +53,11 @@ export default function BestProduct({
         </div>
         <div className="my-6">
           {index === 0 ? (
-            <Image
-              src={img1}
-              alt="laptop-pic"
-              className="max-sm:w-80"
-            />
+            <Image src={img1} alt="laptop-pic" className="max-sm:w-80" />
           ) : index === 1 ? (
-            <Image
-              src={img2}
-              alt="laptop-pic"
-              className="max-sm:w-80"
-            />
+            <Image src={img2} alt="laptop-pic" className="max-sm:w-80" />
           ) : (
-            <Image
-              src={img3}
-              alt="laptop-pix"
-              className="max-sm:w-80"
-            />
+            <Image src={img3} alt="laptop-pix" className="max-sm:w-80" />
           )}
         </div>
         <p className="m-2 text-zinc-900">starting At</p>
@@ -76,6 +70,6 @@ export default function BestProduct({
           Shop
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

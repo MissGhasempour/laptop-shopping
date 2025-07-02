@@ -3,26 +3,27 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import { FaSquareYoutube } from "react-icons/fa6";
+import * as motion from "motion/react-client"
 
 export default function Footer() {
   return (
     <footer className="overflow-hidden max-mobile:text-sm bg-stone-200 max-sm:w-190 text-stone-900 max-lg:w-255 max-xl:w-317 max-md:w-190 2xl:w-785 max-2xl:w-331 ">
       <div className="flex mx-20 max-mobile:mx-2 text-3xl text-blue-900  p-12  max-sm:mx-0">
-        <div className="m-4">
+        <motion.div whileHover={{rotateX:300 , rotateZ: 300, transition: { duration: 2 }}} className="m-4">
           <FaInstagramSquare />
-        </div>
-        <div className="m-4">
+        </motion.div>
+        <motion.div whileHover={{rotateX:300 ,transition: { duration: 2 }}} className="m-4">
           <FaFacebookSquare />
-        </div>
-        <div className="m-4">
+        </motion.div>
+        <motion.div whileHover={{rotateY:300 ,transition: { duration: 2 }}} className="m-4">
           <FaLinkedin />
-        </div>
-        <div className="m-4">
+        </motion.div>
+        <motion.div whileHover={{rotateZ:300 ,transition: { duration: 2 }}} className="m-4">
           <AiFillTwitterSquare />
-        </div>
-        <div className="m-4">
+        </motion.div>
+        <motion.div whileHover={{rotateX:300 , rotateZ: 300, transition: { duration: 2 }}} className="m-4">
           <FaSquareYoutube />
-        </div>
+        </motion.div >
       </div>
       <div className="flex text-sm max-sm:text-sm">
         <div className="m-4">

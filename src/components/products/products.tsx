@@ -13,7 +13,7 @@ export default function Products({
 }: {
   res: [{ culture: string; aliases: string; books: string }];
 }) {
-  //console.log(res[0]);
+ 
 
   // @ts-expect-error
   const [newRes, setNewRes]:Res = useState();
