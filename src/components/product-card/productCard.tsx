@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import img_2 from "@/images/dell-ocAuPlfZXEc-unsplash.jpg";
 import img_1 from "@/images/taan-huyn-RyGOh7pRzAI-unsplash.jpg";
@@ -11,11 +11,13 @@ import img_8 from "@/images/kari-shea-1SAnrIxw5OY-unsplash.jpg";
 import img_9 from "@/images/sreej-pradhan-msKaizMpoRs-unsplash.jpg";
 import img from "@/images/yuhaimedia-ykI7BeSWgMo-unsplash.jpg";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ProductCard({
   id,
   culture,
-  books
+  books,
 }: {
   id: number;
   culture: string;
@@ -23,10 +25,17 @@ export default function ProductCard({
   imageSrc: string;
   isPurple?: boolean;
 }) {
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  });
 
   return (
     <div className="my-7 mx-4">
-      <div className="bg-zinc-100 rounded-2xl w-60 max-sm:w-40 max-lg:w-50 max-mobile:m-auto mobile:m-auto">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={id * 100}
+        className="bg-zinc-100 rounded-2xl w-60 max-sm:w-40 max-lg:w-50 max-mobile:m-auto mobile:m-auto"
+      >
         <div>
           <Image
             src={
@@ -60,7 +69,7 @@ export default function ProductCard({
         </div>
 
         <div className="my-4 ml-4 overflow-hidden max-sm:text-sm">
-          <p className="text-blue-800">{books.slice(0,20)} ...</p>
+          <p className="text-blue-800">{books.slice(0, 20)} ...</p>
         </div>
 
         <Link
@@ -72,7 +81,11 @@ export default function ProductCard({
         <br />
       </div>
 
-      <div className="max-mobile:hidden mobile:hidden tablet:block  max-lg:w-50 my-7 w-60 bg-zinc-100 rounded-2xl max-sm:w-40">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={id * 100}
+        className="max-mobile:hidden mobile:hidden tablet:block  max-lg:w-50 my-7 w-60 bg-zinc-100 rounded-2xl max-sm:w-40"
+      >
         <div>
           <Image
             src={
@@ -107,7 +120,7 @@ export default function ProductCard({
 
         <div className="">
           <div className="my-4 ml-4 overflow-hidden max-sm:text-sm">
-            <p className="text-blue-800">{books.slice(0,20)} ...</p>
+            <p className="text-blue-800">{books.slice(0, 20)} ...</p>
           </div>
 
           <Link
